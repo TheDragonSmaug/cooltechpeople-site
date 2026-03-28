@@ -143,7 +143,6 @@
     cursor: pointer; transition: opacity 0.3s, transform 0.3s; min-width: 0;
   }
   .profile-card:hover { opacity: 0.78; transform: translateY(-3px); }
-  .profile-card.hidden { display: none !important; }
 
   .profile-photo {
     width: 100%; height: 280px;
@@ -174,11 +173,25 @@
     padding: 0.15rem 0.5rem;
   }
   .no-results {
-    display: none; grid-column: 1/-1; text-align: center; padding: 4rem 0;
+    grid-column: 1/-1; text-align: center; padding: 4rem 0;
     color: var(--ink-muted); font-size: 14px; letter-spacing: 0.08em;
   }
+
+  .load-more-wrap {
+    position: relative; z-index: 1;
+    text-align: center; padding: 2rem 3rem 4rem;
+  }
+  .load-more-btn {
+    display: inline-block; padding: 0.9rem 2.8rem;
+    border: 0.5px solid var(--ink); color: var(--ink);
+    background: transparent; font-family: 'DM Sans', sans-serif;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    cursor: pointer; transition: all 0.3s;
+  }
+  .load-more-btn:hover { background: var(--ink); color: var(--bone); }
+
   footer {
-    position: relative; z-index: 1; padding: 2.5rem 3rem; margin-top: 3rem;
+    position: relative; z-index: 1; padding: 2.5rem 3rem;
     border-top: 0.5px solid rgba(26,24,20,0.12);
     display: flex; justify-content: space-between; align-items: center;
     font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted);
@@ -207,7 +220,7 @@
 
 <div class="page-header">
   <h1>The Directory</h1>
-  <div class="result-count"><span id="count">5</span> Professionals</div>
+  <div class="result-count"><span id="count">0</span> Professionals</div>
 </div>
 
 <div class="filter-bar">
@@ -264,92 +277,12 @@
 </div>
 
 <section class="directory">
-  <div class="directory-grid" id="directory-grid">
-
-    <a class="profile-card" href="zamir-zeigler-profile.html"
-       data-name="zamir zeigler" data-role="technical-director media-server"
-       data-expertise="disguise barco-e2 barco-e3 led-processing" data-location="orlando">
-      <div class="profile-photo">
-        <img src="images/zamir-zeigler-headshot.jpg" alt="Zamir Zeigler" style="object-position:75% 10%;" />
-      </div>
-      <div class="profile-name">Zamir Zeigler</div>
-      <div class="profile-role">Live Events Specialist</div>
-      <div class="profile-location">Orlando, FL</div>
-      <div class="profile-tags">
-        <span class="profile-tag">Disguise</span>
-        <span class="profile-tag">Barco E2</span>
-        <span class="profile-tag">LED</span>
-      </div>
-    </a>
-
-    <a class="profile-card" href="#"
-       data-name="tatton jacob" data-role="video-director broadcast"
-       data-expertise="disguise barco-e2 barco-e3 notch" data-location="los-angeles">
-      <div class="profile-photo">
-        <img src="images/tatton-jacob-headshot.jpg" alt="Tatton Jacob" />
-      </div>
-      <div class="profile-name">Tatton Jacob</div>
-      <div class="profile-role">Video Production Director</div>
-      <div class="profile-location">Los Angeles, CA</div>
-      <div class="profile-tags">
-        <span class="profile-tag">Disguise</span>
-        <span class="profile-tag">Notch</span>
-        <span class="profile-tag">Broadcast</span>
-      </div>
-    </a>
-
-    <a class="profile-card" href="#"
-       data-name="cassidy pearsall" data-role="media-server technical-director"
-       data-expertise="disguise resolume watchout" data-location="new-york">
-      <div class="profile-photo">
-        <img src="images/cassidy-pearsall-headshot.jpg" alt="Cassidy Pearsall" />
-      </div>
-      <div class="profile-name">Cassidy Pearsall</div>
-      <div class="profile-role">Media Server Specialist</div>
-      <div class="profile-location">New York, NY</div>
-      <div class="profile-tags">
-        <span class="profile-tag">Disguise</span>
-        <span class="profile-tag">Resolume</span>
-        <span class="profile-tag">Watchout</span>
-      </div>
-    </a>
-
-    <a class="profile-card" href="#"
-       data-name="clay avery" data-role="projection-designer"
-       data-expertise="vectorworks notch resolume" data-location="nashville">
-      <div class="profile-photo">
-        <img src="images/clay-avery-headshot.jpg" alt="Clay Avery" />
-      </div>
-      <div class="profile-name">Clay Avery</div>
-      <div class="profile-role">Projection Designer</div>
-      <div class="profile-location">Nashville, TN</div>
-      <div class="profile-tags">
-        <span class="profile-tag">Vectorworks</span>
-        <span class="profile-tag">Notch</span>
-        <span class="profile-tag">Resolume</span>
-      </div>
-    </a>
-
-    <a class="profile-card" href="#"
-       data-name="melinda sihalath" data-role="technical-director led-tech"
-       data-expertise="led-processing barco-e2 grandma" data-location="chicago">
-      <div class="profile-photo">
-        <img src="images/melinda-sihalath-headshot.jpg" alt="Melinda Sihalath" />
-      </div>
-      <div class="profile-name">Melinda Sihalath</div>
-      <div class="profile-role">Technical Director</div>
-      <div class="profile-location">Chicago, IL</div>
-      <div class="profile-tags">
-        <span class="profile-tag">LED Processing</span>
-        <span class="profile-tag">Barco E2</span>
-        <span class="profile-tag">GrandMA</span>
-      </div>
-    </a>
-
-    <div class="no-results" id="no-results">No professionals match your filters.</div>
-
-  </div>
+  <div class="directory-grid" id="directory-grid"></div>
 </section>
+
+<div class="load-more-wrap" id="load-more-wrap" style="display:none;">
+  <button class="load-more-btn" onclick="loadMore()">Load More</button>
+</div>
 
 <footer>
   <span>Cool Tech People</span>
@@ -357,7 +290,94 @@
 </footer>
 
 <script>
+  const PAGE_SIZE = 12;
+
+  const professionals = [
+    { name: "Zamir Zeigler",    role: "technical-director media-server", expertise: "disguise barco-e2 barco-e3 led-processing", location: "orlando",     title: "Live Events Specialist",      photo: "images/zamir-zeigler-headshot.jpg",    profile: "zamir-zeigler-profile.html",    position: "75% 10%",   tags: ["Disguise","Barco E2","LED"] },
+    { name: "Tatton Jacob",     role: "video-director broadcast",        expertise: "disguise barco-e2 barco-e3 notch",          location: "los-angeles", title: "Video Production Director",   photo: "images/tatton-jacob-headshot.jpg",     profile: "tatton-jacob-profile.html",     position: "center top", tags: ["Disguise","Notch","Broadcast"] },
+    { name: "Cassidy Pearsall", role: "media-server technical-director", expertise: "disguise resolume watchout",                location: "new-york",    title: "Media Server Specialist",     photo: "images/cassidy-pearsall-headshot.jpg", profile: "cassidy-pearsall-profile.html", position: "center top", tags: ["Disguise","Resolume"] },
+    { name: "Clay Avery",       role: "projection-designer",             expertise: "vectorworks notch resolume",                location: "nashville",   title: "Projection Designer",         photo: "images/clay-avery-headshot.jpg",       profile: "clay-avery-profile.html",       position: "center top", tags: ["Vectorworks","Notch"] },
+    { name: "Melinda Sihalath", role: "technical-director led-tech",     expertise: "led-processing barco-e2 grandma",           location: "chicago",     title: "Technical Director",          photo: "images/melinda-sihalath-headshot.jpg", profile: "melinda-sihalath-profile.html", position: "center top", tags: ["LED Processing","GrandMA"] },
+    { name: "Andy Rivas",       role: "technical-director media-server", expertise: "disguise barco-e2",                         location: "touring",     title: "Live Events Professional",    photo: "images/andy-rivas-headshot.jpg",       profile: "andy-rivas-profile.html",       position: "center top", tags: ["Disguise","Barco E2"] },
+    { name: "Angela Cardetti",  role: "media-server",                    expertise: "disguise notch resolume",                   location: "los-angeles", title: "Live Events Professional",    photo: "images/angela-cardetti-headshot.jpg",  profile: "angela-cardetti-profile.html",  position: "center top", tags: ["Disguise","Notch"] },
+    { name: "Corinne Wolowicz", role: "media-server technical-director", expertise: "disguise watchout",                         location: "new-york",    title: "Live Events Professional",    photo: "images/corinne-wolowicz-headshot.jpg", profile: "corinne-wolowicz-profile.html", position: "center top", tags: ["Disguise","Watchout"] },
+    { name: "Ed Lunsford",      role: "projection-designer media-server",expertise: "vectorworks disguise notch",                location: "nashville",   title: "Live Events Professional",    photo: "images/ed-lunsford-headshot.jpg",      profile: "ed-lunsford-profile.html",      position: "center 20%", tags: ["Vectorworks","Disguise"] },
+    { name: "Jason Torres",     role: "media-server technical-director", expertise: "disguise barco-e2 barco-e3",                location: "chicago",     title: "Live Events Professional",    photo: "images/jason-torres-headshot.jpg",     profile: "jason-torres-profile.html",     position: "center top", tags: ["Disguise","Barco E2"] },
+    { name: "Jeff Daniels",     role: "technical-director media-server", expertise: "disguise resolume led-processing",          location: "touring",     title: "Live Events Professional",    photo: "images/jeff-daniels-headshot.jpg",     profile: "jeff-daniels-profile.html",     position: "center top", tags: ["Disguise","LED Processing"] },
+    { name: "Justin King",      role: "broadcast video-director",        expertise: "disguise barco-e2 notch",                   location: "orlando",     title: "Live Events Professional",    photo: "images/justin-king-headshot.jpg",      profile: "justin-king-profile.html",      position: "center 30%", tags: ["Disguise","Broadcast"] },
+    { name: "Luke Lay",         role: "broadcast technical-director",    expertise: "disguise analog-way barco-e2",              location: "nashville",   title: "Live Events Professional",    photo: "images/luke-lay-headshot.jpg",         profile: "luke-lay-profile.html",         position: "20% top",    tags: ["Disguise","Analog Way"] },
+    { name: "Michael Radu",     role: "media-server technical-director", expertise: "disguise barco-e3 resolume",                location: "los-angeles", title: "Live Events Professional",    photo: "images/michael-radu-headshot.jpg",     profile: "michael-radu-profile.html",     position: "center top", tags: ["Disguise","Resolume"] },
+    { name: "Siv Sands",        role: "media-server projection-designer",expertise: "disguise notch vectorworks",                location: "london",      title: "Live Events Professional",    photo: "images/siv-sands-headshot.jpg",        profile: "siv-sands-profile.html",        position: "center top", tags: ["Disguise","Notch"] },
+  ];
+
   const activeFilters = { role: null, expertise: null, location: null };
+  let currentPool = [];
+  let visibleCount = 0;
+  let isFiltering = false;
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function cardHTML(p) {
+    return `
+      <a class="profile-card" href="${p.profile}">
+        <div class="profile-photo">
+          <img src="${p.photo}" alt="${p.name}" style="object-position:${p.position};" loading="lazy" />
+        </div>
+        <div class="profile-name">${p.name}</div>
+        <div class="profile-role">${p.title}</div>
+        <div class="profile-tags">${p.tags.map(t => `<span class="profile-tag">${t}</span>`).join('')}</div>
+      </a>`;
+  }
+
+  function renderGrid(list, limit) {
+    const grid = document.getElementById('directory-grid');
+    const shown = limit ? list.slice(0, limit) : list;
+    grid.innerHTML = shown.length
+      ? shown.map(cardHTML).join('')
+      : '<div class="no-results">No professionals match your filters.</div>';
+    document.getElementById('count').textContent = list.length;
+    const loadMoreWrap = document.getElementById('load-more-wrap');
+    loadMoreWrap.style.display = (!isFiltering && list.length > visibleCount) ? 'block' : 'none';
+  }
+
+  function applyFilters() {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+    isFiltering = !!(searchTerm || activeFilters.role || activeFilters.expertise || activeFilters.location);
+
+    if (isFiltering) {
+      const filtered = professionals.filter(p => {
+        const matchSearch = !searchTerm || p.name.toLowerCase().includes(searchTerm) || p.role.includes(searchTerm) || p.expertise.includes(searchTerm) || p.location.includes(searchTerm) || p.title.toLowerCase().includes(searchTerm);
+        const matchRole = !activeFilters.role || p.role.includes(activeFilters.role);
+        const matchExpertise = !activeFilters.expertise || p.expertise.includes(activeFilters.expertise);
+        const matchLocation = !activeFilters.location || p.location.includes(activeFilters.location);
+        return matchSearch && matchRole && matchExpertise && matchLocation;
+      });
+      renderGrid(filtered, null);
+    } else {
+      renderGrid(currentPool, visibleCount);
+    }
+  }
+
+  function loadMore() {
+    visibleCount = Math.min(visibleCount + PAGE_SIZE, currentPool.length);
+    renderGrid(currentPool, visibleCount);
+  }
+
+  function clearAll() {
+    document.getElementById('search-input').value = '';
+    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+    Object.keys(activeFilters).forEach(k => activeFilters[k] = null);
+    isFiltering = false;
+    visibleCount = Math.min(PAGE_SIZE, currentPool.length);
+    renderGrid(currentPool, visibleCount);
+  }
 
   document.querySelectorAll('.filter-pill').forEach(pill => {
     pill.addEventListener('click', () => {
@@ -377,36 +397,10 @@
 
   document.getElementById('search-input').addEventListener('input', applyFilters);
 
-  function applyFilters() {
-    const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
-    const cards = document.querySelectorAll('.profile-card');
-    let visibleCount = 0;
-    cards.forEach(card => {
-      const name = card.dataset.name || '';
-      const role = card.dataset.role || '';
-      const expertise = card.dataset.expertise || '';
-      const location = card.dataset.location || '';
-      const matchesSearch = !searchTerm || name.includes(searchTerm) || role.includes(searchTerm) || expertise.includes(searchTerm) || location.includes(searchTerm);
-      const matchesRole = !activeFilters.role || role.includes(activeFilters.role);
-      const matchesExpertise = !activeFilters.expertise || expertise.includes(activeFilters.expertise);
-      const matchesLocation = !activeFilters.location || location.includes(activeFilters.location);
-      if (matchesSearch && matchesRole && matchesExpertise && matchesLocation) {
-        card.classList.remove('hidden');
-        visibleCount++;
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-    document.getElementById('count').textContent = visibleCount;
-    document.getElementById('no-results').style.display = visibleCount === 0 ? 'block' : 'none';
-  }
-
-  function clearAll() {
-    document.getElementById('search-input').value = '';
-    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-    Object.keys(activeFilters).forEach(k => activeFilters[k] = null);
-    applyFilters();
-  }
+  // Init — shuffle and show first 12
+  currentPool = shuffle(professionals);
+  visibleCount = Math.min(PAGE_SIZE, currentPool.length);
+  renderGrid(currentPool, visibleCount);
 </script>
 
 </body>
