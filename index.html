@@ -13,6 +13,8 @@
     --ink: #1a1814;
     --ink-light: #5a5650;
     --ink-muted: #9a9590;
+    --accent: #c45e1e;
+    --accent-light: #d4713a;
   }
   html { scroll-behavior: smooth; }
   body {
@@ -71,7 +73,7 @@
     text-decoration: none;
     transition: color 0.2s;
   }
-  nav a:hover { color: var(--ink); }
+  nav a:hover { color: var(--accent); }
   .hero {
     position: relative; z-index: 1;
     padding: 7rem 3rem 4rem;
@@ -83,7 +85,7 @@
     font-size: 11px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--ink-muted);
+    color: var(--accent);
     margin-bottom: 2rem;
   }
   .hero h1 {
@@ -116,11 +118,11 @@
     text-transform: uppercase;
     transition: all 0.3s;
   }
-  .hero-cta:hover { background: var(--ink); color: var(--bone); }
+  .hero-cta:hover { background: var(--accent); color: var(--bone); border-color: var(--accent); }
   .divider {
     position: relative; z-index: 1;
-    width: 40px; height: 0.5px;
-    background: var(--ink-muted);
+    width: 40px; height: 1px;
+    background: var(--accent);
     margin: 0 auto 5rem;
   }
   .featured {
@@ -134,7 +136,7 @@
     font-size: 11px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--ink-muted);
+    color: var(--accent);
     text-align: center;
     margin-bottom: 4rem;
   }
@@ -146,7 +148,7 @@
     margin: 0 auto;
   }
   .profile-card { cursor: pointer; transition: opacity 0.3s, transform 0.3s; }
-  .profile-card:hover { opacity: 0.75; transform: translateY(-4px); }
+  .profile-card:hover { opacity: 0.85; transform: translateY(-4px); }
   .profile-photo {
     width: 100%;
     aspect-ratio: 3/4;
@@ -170,7 +172,9 @@
     font-size: 14px; font-weight: 500;
     letter-spacing: 0.06em; margin-bottom: 0.3rem;
     text-transform: uppercase;
+    transition: color 0.2s;
   }
+  .profile-card:hover .profile-name { color: var(--accent); }
   .profile-title {
     font-size: 11px; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--ink-muted);
@@ -199,14 +203,14 @@
   .search-wrap input::placeholder { color: var(--ink-muted); }
   .search-wrap input:focus { outline: none; }
   .search-wrap button {
-    padding: 1rem 1.5rem; background: var(--ink);
+    padding: 1rem 1.5rem; background: var(--accent);
     border: none; color: var(--bone);
     font-family: 'DM Sans', sans-serif;
     font-size: 11px; letter-spacing: 0.18em;
     text-transform: uppercase; cursor: pointer;
     transition: opacity 0.2s;
   }
-  .search-wrap button:hover { opacity: 0.8; }
+  .search-wrap button:hover { opacity: 0.85; }
   .filter-row {
     display: flex; justify-content: center;
     gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem;
@@ -220,7 +224,7 @@
     transition: all 0.2s; font-family: 'DM Sans', sans-serif;
   }
   .filter-pill:hover, .filter-pill.active {
-    background: var(--ink); color: var(--bone); border-color: var(--ink);
+    background: var(--accent); color: var(--bone); border-color: var(--accent);
   }
   .view-all-link {
     display: inline-block; padding: 0.9rem 2.8rem;
@@ -229,7 +233,7 @@
     letter-spacing: 0.2em; text-transform: uppercase;
     transition: all 0.3s;
   }
-  .view-all-link:hover { background: var(--ink); color: var(--bone); }
+  .view-all-link:hover { background: var(--accent); color: var(--bone); border-color: var(--accent); }
   footer {
     position: relative; z-index: 1;
     padding: 2.5rem 3rem;
