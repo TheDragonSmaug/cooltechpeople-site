@@ -13,6 +13,8 @@
     --ink: #1a1814;
     --ink-light: #5a5650;
     --ink-muted: #9a9590;
+    --accent: #c45e1e;
+    --accent-light: #d4713a;
   }
   html { scroll-behavior: smooth; }
   body {
@@ -66,7 +68,7 @@
     text-transform: uppercase; color: var(--ink-light);
     text-decoration: none; transition: color 0.2s;
   }
-  nav a:hover { color: var(--ink); }
+  nav a:hover { color: var(--accent); }
 
   /* BACK LINK */
   .back-link {
@@ -77,7 +79,7 @@
     text-transform: uppercase; color: var(--ink-muted);
     text-decoration: none; transition: color 0.2s;
   }
-  .back-link:hover { color: var(--ink); }
+  .back-link:hover { color: var(--accent); }
 
   /* PROFILE GRID */
   .profile-page {
@@ -115,7 +117,7 @@
 
   .col-label {
     font-size: 10px; letter-spacing: 0.25em;
-    text-transform: uppercase; color: var(--ink-muted);
+    text-transform: uppercase; color: var(--accent);
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 0.5px solid rgba(26,24,20,0.1);
@@ -146,7 +148,7 @@
   }
   .profile-title-large {
     font-size: 11px; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--ink-muted);
+    text-transform: uppercase; color: var(--accent);
     text-align: right;
   }
 
@@ -160,8 +162,8 @@
     display: inline-block;
   }
   .expertise-tag.primary {
-    background: var(--ink); color: var(--bone);
-    border-color: var(--ink);
+    background: var(--accent); color: var(--bone);
+    border-color: var(--accent);
   }
 
   /* BIO */
@@ -215,7 +217,7 @@
     font-family: 'DM Sans', sans-serif;
     transition: all 0.2s; width: 100%; text-align: center;
   }
-  .share-btn:hover { background: var(--ink); color: var(--bone); }
+  .share-btn:hover { background: var(--accent); color: var(--bone); }
 
   /* FOOTER */
   footer {
@@ -249,52 +251,47 @@
 
 <div class="name-block">
   <div class="profile-name-large">Zamir Zeigler</div>
-  <div class="profile-title-large">Live Events Media Specialist</div>
+  <div class="profile-title-large">Media Server Op · Video Engineer · Projectionist</div>
 </div>
 
 <div class="profile-page">
 
   <!-- COL 1: PHOTO -->
   <div class="col-photo">
-    <img src="images/zamir-zeigler-headshot.jpg" alt="Zamir Zeigler" />
+    <img src="images/zamir-zeigler-headshot.jpg" alt="Zamir Zeigler" style="object-position: 75% 15%;" />
   </div>
 
   <!-- COL 2: EXPERTISE & BIO -->
   <div class="col-expertise">
     <div class="col-label">Expertise</div>
     <div class="expertise-tags">
-      <span class="expertise-tag primary">Live Events</span>
       <span class="expertise-tag primary">Media Servers</span>
+      <span class="expertise-tag primary">Projection</span>
       <span class="expertise-tag">Disguise</span>
       <span class="expertise-tag">Barco E2</span>
-      <span class="expertise-tag">Barco E3</span>
-      <span class="expertise-tag">Video Systems</span>
-      <span class="expertise-tag">LED Systems</span>
-      <span class="expertise-tag">Technical Direction</span>
+      <span class="expertise-tag">Aquilon</span>
+      <span class="expertise-tag">Milumin</span>
+      <span class="expertise-tag">Pixera</span>
+      <span class="expertise-tag">Projection Mapping</span>
+      <span class="expertise-tag">PixelHue</span>
     </div>
-    <div class="bio-text">
-      Zamir is a seasoned live events and media technology specialist with deep expertise across video systems, media servers, and large-scale technical production. Known for his composure under pressure and ability to solve complex technical challenges in real time, he has been a trusted operator on some of the most high-profile productions in the industry.
-    </div>
+    <div class="bio-text">Known in the industry as "Z", Zamir is a seasoned live events and media technology specialist with deep expertise across media servers, projection, and large-scale technical production. With hands-on experience spanning corporate events and major touring productions, he brings composure under pressure and sharp technical instincts to every show he works.</div>
   </div>
 
   <!-- COL 3: PROJECTS -->
   <div class="col-projects">
     <div class="col-label">Notable Projects</div>
     <div class="project-item">
-      <div class="project-title">Major Stadium Productions</div>
-      <div class="project-desc">Managed all video and media server systems for large-scale stadium live events, overseeing technical workflows from pre-production through show day.</div>
+      <div class="project-title">Tony Robbins Live Events</div>
+      <div class="project-desc">Served as the dedicated Disguise operator for Tony Robbins live events, managing all media server playback and real-time content for high-energy, large-scale productions.</div>
     </div>
     <div class="project-item">
       <div class="project-title">Corporate Live Events</div>
-      <div class="project-desc">Technical direction for high-profile corporate productions requiring complex multi-screen video setups and real-time content management.</div>
+      <div class="project-desc">Served in virtually every video role across corporate-level productions — from media server operation and video engineering to projection and playback — delivering polished, reliable results for high-profile clients.</div>
     </div>
     <div class="project-item">
-      <div class="project-title">Live Concert Tours</div>
-      <div class="project-desc">Video systems specialist on major touring productions, managing Barco E2 and E3 multi-screen configurations across multiple venues nightly.</div>
-    </div>
-    <div class="project-item">
-      <div class="project-title">Broadcast &amp; Live Streaming</div>
-      <div class="project-desc">Technical lead for broadcast-quality live event productions with redundant video systems and real-time switching for global audiences.</div>
+      <div class="project-title">Kanye West — Donda Listening Parties</div>
+      <div class="project-desc">Served as Disguise media server operator supporting Kanye West's Donda Listening Parties Tour, managing all media server playback for one of the most talked-about live event series of its time.</div>
     </div>
   </div>
 
@@ -303,23 +300,23 @@
     <div class="col-label">Contact</div>
     <div class="contact-item">
       <div class="contact-label">Email</div>
-      <div class="contact-value"><a href="/cdn-cgi/l/email-protection#a7c3cec6c9c2e7c2dfc6cad7cbc289c4c8ca"><span class="__cf_email__" data-cfemail="5c38353d32391c39243d312c3039723f3331">[email&#160;protected]</span></a></div>
+      <div class="contact-value"><a href="mailto:123zaz@gmail.com">123zaz@gmail.com</a></div>
     </div>
     <div class="contact-item">
       <div class="contact-label">Website</div>
-      <div class="contact-value"><a href="#">zamierzeigler.com</a></div>
+      <div class="contact-value">—</div>
     </div>
     <div class="contact-item">
       <div class="contact-label">LinkedIn</div>
-      <div class="contact-value"><a href="#">linkedin.com/in/zamierzeigler</a></div>
+      <div class="contact-value"><a href="https://www.linkedin.com/in/zamir-zeigler-29a5b3a0/">linkedin.com/in/zamir-zeigler</a></div>
     </div>
     <div class="contact-item">
       <div class="contact-label">Based In</div>
-      <div class="contact-value">Orlando, FL</div>
+      <div class="contact-value">Miami, FL</div>
     </div>
     <div class="contact-item">
       <div class="contact-label">Available For</div>
-      <div class="contact-value">Touring · Corporate · Broadcast · Live Events</div>
+      <div class="contact-value">Corporate · Live Events · Touring</div>
     </div>
     <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href); this.textContent='Link Copied!'">Share Profile</button>
   </d
