@@ -13,6 +13,8 @@
     --ink: #1a1814;
     --ink-light: #5a5650;
     --ink-muted: #9a9590;
+    --accent: #c45e1e;
+    --accent-light: #d4713a;
   }
   html { scroll-behavior: smooth; }
   body {
@@ -54,7 +56,7 @@
     text-transform: uppercase; color: var(--ink-light);
     text-decoration: none; transition: color 0.2s;
   }
-  nav a:hover, nav a.active { color: var(--ink); }
+  nav a:hover, nav a.active { color: var(--accent); }
 
   /* HERO */
   .page-hero {
@@ -65,14 +67,15 @@
   }
   .eyebrow {
     font-size: 11px; letter-spacing: 0.25em;
-    text-transform: uppercase; color: var(--ink-muted);
+    text-transform: uppercase; color: var(--accent);
     margin-bottom: 1.5rem;
   }
   .page-hero h1 {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: clamp(2rem, 5vw, 3.6rem);
-    font-weight: 700; letter-spacing: 0.1em;
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 300; letter-spacing: 0.3em;
     text-transform: uppercase; line-height: 1;
+    white-space: nowrap;
     margin-bottom: 2rem;
   }
   .page-hero .lead {
@@ -83,8 +86,8 @@
 
   .divider {
     position: relative; z-index: 1;
-    width: 40px; height: 0.5px;
-    background: var(--ink-muted);
+    width: 40px; height: 1px;
+    background: var(--accent);
     margin: 0 auto 0;
   }
 
@@ -98,19 +101,22 @@
   }
   .mission-inner {
     max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 2fr;
-    gap: 5rem; align-items: start;
+    display: grid; grid-template-columns: 280px 1fr;
+    gap: 5rem; align-items: flex-start;
   }
+  .mission-inner > div:first-child,
+  .origin-inner > div:first-child { padding-top: 0.25rem; }
   .section-label {
     font-size: 11px; letter-spacing: 0.25em;
-    text-transform: uppercase; color: var(--ink-muted);
+    text-transform: uppercase; color: var(--accent);
     margin-bottom: 1rem;
   }
   .section-heading {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
-    font-weight: 700; letter-spacing: 0.06em;
-    text-transform: uppercase; line-height: 1.1;
+    font-size: clamp(1.1rem, 1.6vw, 1.7rem);
+    font-weight: 300; letter-spacing: 0.08em;
+    text-transform: uppercase; line-height: 1;
+    white-space: nowrap;
   }
   .body-text p {
     font-size: 15px; color: var(--ink-light);
@@ -123,11 +129,11 @@
   .origin-section {
     position: relative; z-index: 1;
     padding: 5rem 3rem;
-    max-width: 1100px; margin: 0 auto;
   }
   .origin-inner {
-    display: grid; grid-template-columns: 1fr 2fr;
-    gap: 5rem; align-items: start;
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 280px 1fr;
+    gap: 5rem; align-items: flex-start;
   }
 
   /* VALUES */
@@ -141,7 +147,7 @@
   .values-inner { max-width: 1100px; margin: 0 auto; }
   .values-label {
     font-size: 11px; letter-spacing: 0.25em;
-    text-transform: uppercase; color: var(--ink-muted);
+    text-transform: uppercase; color: var(--accent);
     text-align: center; margin-bottom: 3rem;
   }
   .values-grid {
@@ -153,7 +159,7 @@
   .value-number {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 2.5rem; font-weight: 700;
-    color: rgba(26,24,20,0.08); line-height: 1; margin-bottom: 1rem;
+    color: rgba(196,94,30,0.15); line-height: 1; margin-bottom: 1rem;
   }
   .value-title {
     font-size: 13px; font-weight: 500;
@@ -183,9 +189,9 @@
     text-decoration: none; font-size: 11px;
     letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.3s;
   }
-  .btn:hover { background: var(--ink); color: var(--bone); }
-  .btn-primary { background: var(--ink); color: var(--bone); }
-  .btn-primary:hover { opacity: 0.8; }
+  .btn:hover { background: var(--accent); color: var(--bone); border-color: var(--accent); }
+  .btn-primary { background: var(--accent); color: var(--bone); border-color: var(--accent); }
+  .btn-primary:hover { opacity: 0.85; }
 
   footer {
     position: relative; z-index: 1; padding: 2.5rem 3rem;
@@ -257,7 +263,7 @@
       <div class="value-item">
         <div class="value-number">01</div>
         <div class="value-title">Trust Over Volume</div>
-        <div class="value-desc">Every professional here has been vetted. We'd rather have forty exceptional people than four thousand average ones. Quality is the only metric that matters.</div>
+        <div class="value-desc">Every professional here has been personally added or referred by an existing member — there is no other way in. We'd rather have forty people who vouch for each other than four thousand strangers. Quality and trust are the only metrics that matter.</div>
       </div>
       <div class="value-item">
         <div class="value-number">02</div>
@@ -277,15 +283,11 @@
   <h2>Think You Belong Here?</h2>
   <p>Cool Tech People is invite-only and carefully curated. If you're a top-tier live events professional and believe you belong in this directory, we'd love to hear from you.</p>
   <div class="join-links">
-    <a href="mailto:hello@cooltechpeople.com" class="btn btn-primary">Get In Touch</a>
+    <a href="/cdn-cgi/l/email-protection#721a171e1e1d32111d1d1e0617111a02171d021e175c111d1f" class="btn btn-primary">Get In Touch</a>
     <a href="directory.html" class="btn">Browse The Directory</a>
   </div>
 </section>
 
 <footer>
   <span>Cool Tech People</span>
-  <span>&copy; 2026 — A Curated Community</span>
-</footer>
-
-</body>
-</html>
+  <span>&copy; 2026 — A Curat

@@ -13,6 +13,8 @@
     --ink: #1a1814;
     --ink-light: #5a5650;
     --ink-muted: #9a9590;
+    --accent: #c45e1e;
+    --accent-light: #d4713a;
   }
   html { scroll-behavior: smooth; }
   body {
@@ -54,7 +56,7 @@
     text-transform: uppercase; color: var(--ink-light);
     text-decoration: none; transition: color 0.2s;
   }
-  nav a:hover, nav a.active { color: var(--ink); }
+  nav a:hover, nav a.active { color: var(--accent); }
 
   .page-header {
     position: relative; z-index: 1;
@@ -97,7 +99,7 @@
   .search-wrap input::placeholder { color: var(--ink-muted); }
   .search-wrap input:focus { outline: none; }
   .search-wrap button {
-    padding: 0.75rem 1.25rem; background: var(--ink); border: none;
+    padding: 0.75rem 1.25rem; background: var(--accent); border: none;
     color: var(--bone); font-family: 'DM Sans', sans-serif;
     font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
     cursor: pointer; transition: opacity 0.2s;
@@ -126,7 +128,7 @@
     transition: all 0.2s; font-family: 'DM Sans', sans-serif; white-space: nowrap;
   }
   .filter-pill:hover { border-color: var(--ink); color: var(--ink); }
-  .filter-pill.active { background: var(--ink); color: var(--bone); border-color: var(--ink); }
+  .filter-pill.active { background: var(--accent); color: var(--bone); border-color: var(--accent); }
 
   .directory {
     position: relative; z-index: 1;
@@ -143,6 +145,7 @@
     cursor: pointer; transition: opacity 0.3s, transform 0.3s; min-width: 0;
   }
   .profile-card:hover { opacity: 0.78; transform: translateY(-3px); }
+  .profile-card:hover .profile-name { color: var(--accent); }
 
   .profile-photo {
     width: 100%; height: 280px;
@@ -188,7 +191,7 @@
     font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
     cursor: pointer; transition: all 0.3s;
   }
-  .load-more-btn:hover { background: var(--ink); color: var(--bone); }
+  .load-more-btn:hover { background: var(--accent); color: var(--bone); border-color: var(--accent); }
 
   footer {
     position: relative; z-index: 1; padding: 2.5rem 3rem;
