@@ -58,6 +58,7 @@
   }
   nav a:hover, nav a.active { color: var(--accent); }
 
+  /* PAGE HEADER */
   .page-header {
     position: relative; z-index: 1;
     padding: 8rem 3rem 2rem;
@@ -76,17 +77,17 @@
   }
   .result-count span { color: var(--ink); font-weight: 500; }
 
-  .filter-bar {
+  /* SEARCH BAR */
+  .search-bar {
     position: relative; z-index: 1;
     background: rgba(255,255,255,0.6);
     border-bottom: 0.5px solid rgba(26,24,20,0.1);
-    padding: 1.5rem 3rem;
+    padding: 1.2rem 3rem;
   }
-  .filter-bar-inner {
+  .search-bar-inner {
     max-width: 1200px; margin: 0 auto;
-    display: flex; flex-direction: column; gap: 1rem;
+    display: flex; gap: 0.75rem; align-items: center;
   }
-  .search-row { display: flex; gap: 0.75rem; align-items: center; }
   .search-wrap {
     flex: 1; display: flex; max-width: 480px;
     border: 0.5px solid var(--ink);
@@ -104,7 +105,7 @@
     font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
     cursor: pointer; transition: opacity 0.2s;
   }
-  .search-wrap button:hover { opacity: 0.8; }
+  .search-wrap button:hover { opacity: 0.85; }
   .clear-btn {
     padding: 0.75rem 1.25rem; border: 0.5px solid rgba(26,24,20,0.2);
     background: transparent; color: var(--ink-muted);
@@ -114,22 +115,70 @@
   }
   .clear-btn:hover { color: var(--ink); border-color: var(--ink); }
 
-  .filter-groups { display: flex; gap: 2rem; flex-wrap: wrap; }
-  .filter-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .filter-group-label {
+  /* CATEGORY TABS */
+  .category-tabs {
+    position: relative; z-index: 1;
+    background: rgba(255,255,255,0.4);
+    border-bottom: 0.5px solid rgba(26,24,20,0.1);
+  }
+  .category-tabs-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .category-tabs-inner::-webkit-scrollbar { display: none; }
+  .cat-tab {
+    padding: 1.1rem 1.8rem;
+    font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-muted);
+    cursor: pointer; background: transparent; border: none;
+    border-bottom: 2px solid transparent;
+    font-family: 'DM Sans', sans-serif;
+    white-space: nowrap; transition: all 0.2s;
+    margin-bottom: -0.5px;
+  }
+  .cat-tab:hover { color: var(--ink); }
+  .cat-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 500; }
+
+  /* SUB FILTERS */
+  .sub-filters {
+    position: relative; z-index: 1;
+    background: rgba(255,255,255,0.6);
+    border-bottom: 0.5px solid rgba(26,24,20,0.08);
+    padding: 0.9rem 3rem;
+    min-height: 52px;
+  }
+  .sub-filters-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;
+  }
+  .sub-label {
     font-size: 10px; letter-spacing: 0.2em;
     text-transform: uppercase; color: var(--ink-muted);
+    margin-right: 0.5rem; white-space: nowrap;
   }
-  .filter-pills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
   .filter-pill {
-    padding: 0.3rem 0.85rem; border: 0.5px solid rgba(26,24,20,0.2);
-    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.25rem 0.75rem; border: 0.5px solid rgba(26,24,20,0.2);
+    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--ink-light); cursor: pointer; background: transparent;
     transition: all 0.2s; font-family: 'DM Sans', sans-serif; white-space: nowrap;
   }
-  .filter-pill:hover { border-color: var(--ink); color: var(--ink); }
+  .filter-pill:hover { border-color: var(--accent); color: var(--accent); }
   .filter-pill.active { background: var(--accent); color: var(--bone); border-color: var(--accent); }
 
+  /* LOCATION ROW */
+  .location-bar {
+    position: relative; z-index: 1;
+    background: rgba(255,255,255,0.3);
+    border-bottom: 0.5px solid rgba(26,24,20,0.06);
+    padding: 0.7rem 3rem;
+  }
+  .location-bar-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;
+  }
+
+  /* DIRECTORY GRID */
   .directory {
     position: relative; z-index: 1;
     padding: 3rem;
@@ -158,7 +207,8 @@
   }
   .profile-name {
     font-size: 14px; font-weight: 500;
-    letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.2rem;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 0.2rem; transition: color 0.2s;
   }
   .profile-role {
     font-size: 11px; letter-spacing: 0.1em;
@@ -180,6 +230,7 @@
     color: var(--ink-muted); font-size: 14px; letter-spacing: 0.08em;
   }
 
+  /* LOAD MORE */
   .load-more-wrap {
     position: relative; z-index: 1;
     text-align: center; padding: 2rem 3rem 4rem;
@@ -199,11 +250,13 @@
     display: flex; justify-content: space-between; align-items: center;
     font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted);
   }
+
   @media (max-width: 1024px) { .directory-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 768px) {
     header { padding: 1.2rem 1.5rem; gap: 1.5rem; }
     .page-header { padding: 7rem 1.5rem 2rem; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
-    .filter-bar { padding: 1.2rem 1.5rem; }
+    .search-bar, .location-bar { padding: 1rem 1.5rem; }
+    .sub-filters { padding: 0.9rem 1.5rem; }
     .directory { padding: 1.5rem; }
     .directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
     .profile-photo { height: 200px; }
@@ -226,63 +279,50 @@
   <div class="result-count"><span id="count">0</span> Professionals</div>
 </div>
 
-<div class="filter-bar">
-  <div class="filter-bar-inner">
-    <div class="search-row">
-      <div class="search-wrap">
-        <input type="text" id="search-input" placeholder="Search by name, gear, skill...">
-        <button onclick="applyFilters()">Search</button>
-      </div>
-      <button class="clear-btn" onclick="clearAll()">Clear All</button>
+<!-- SEARCH -->
+<div class="search-bar">
+  <div class="search-bar-inner">
+    <div class="search-wrap">
+      <input type="text" id="search-input" placeholder="Search by name, gear, specialty...">
+      <button onclick="applyFilters()">Search</button>
     </div>
-    <div class="filter-groups">
-      <div class="filter-group">
-        <div class="filter-group-label">Role</div>
-        <div class="filter-pills">
-          <button class="filter-pill" data-filter="role" data-value="media-server">Media Server Op</button>
-          <button class="filter-pill" data-filter="role" data-value="video-engineer">Video Engineer</button>
-          <button class="filter-pill" data-filter="role" data-value="projectionist">Projectionist</button>
-          <button class="filter-pill" data-filter="role" data-value="camera-operator">Camera Operator</button>
-          <button class="filter-pill" data-filter="role" data-value="led-technician">LED Technician</button>
-          <button class="filter-pill" data-filter="role" data-value="broadcast">Broadcast Engineer</button>
-          <button class="filter-pill" data-filter="role" data-value="technical-director">Technical Director</button>
-          <button class="filter-pill" data-filter="role" data-value="graphics-operator">Graphics Operator</button>
-          <button class="filter-pill" data-filter="role" data-value="creative-developer">Creative Developer</button>
-          <button class="filter-pill" data-filter="role" data-value="trainer">Trainer</button>
-        </div>
-      </div>
-      <div class="filter-group">
-        <div class="filter-group-label">Expertise / Gear</div>
-        <div class="filter-pills">
-          <button class="filter-pill" data-filter="expertise" data-value="disguise">Disguise</button>
-          <button class="filter-pill" data-filter="expertise" data-value="barco-e2">Barco E2</button>
-          <button class="filter-pill" data-filter="expertise" data-value="barco-e3">Barco E3</button>
-          <button class="filter-pill" data-filter="expertise" data-value="pixera">Pixera</button>
-          <button class="filter-pill" data-filter="expertise" data-value="unreal">Unreal</button>
-          <button class="filter-pill" data-filter="expertise" data-value="notch">Notch</button>
-          <button class="filter-pill" data-filter="expertise" data-value="resolume">Resolume</button>
-          <button class="filter-pill" data-filter="expertise" data-value="watchout">Watchout</button>
-          <button class="filter-pill" data-filter="expertise" data-value="aquilon">Aquilon</button>
-          <button class="filter-pill" data-filter="expertise" data-value="pixelhue">PixelHue</button>
-          <button class="filter-pill" data-filter="expertise" data-value="led-processing">LED Processing</button>
-          <button class="filter-pill" data-filter="expertise" data-value="projection">Projection</button>
-          <button class="filter-pill" data-filter="expertise" data-value="atem">ATEM</button>
-        </div>
-      </div>
-      <div class="filter-group">
-        <div class="filter-group-label">Location</div>
-        <div class="filter-pills">
-          <button class="filter-pill" data-filter="location" data-value="new-york">New York</button>
-          <button class="filter-pill" data-filter="location" data-value="los-angeles">Los Angeles</button>
-          <button class="filter-pill" data-filter="location" data-value="orlando">Orlando</button>
-          <button class="filter-pill" data-filter="location" data-value="nashville">Nashville</button>
-          <button class="filter-pill" data-filter="location" data-value="chicago">Chicago</button>
-          <button class="filter-pill" data-filter="location" data-value="london">London</button>
-          <button class="filter-pill" data-filter="location" data-value="miami">Miami</button>
-          <button class="filter-pill" data-filter="location" data-value="touring">Touring / International</button>
-        </div>
-      </div>
-    </div>
+    <button class="clear-btn" onclick="clearAll()">Clear All</button>
+  </div>
+</div>
+
+<!-- CATEGORY TABS -->
+<div class="category-tabs">
+  <div class="category-tabs-inner">
+    <button class="cat-tab active" data-category="all">All</button>
+    <button class="cat-tab" data-category="media-servers">Media Servers</button>
+    <button class="cat-tab" data-category="led">LED</button>
+    <button class="cat-tab" data-category="projection">Projection</button>
+    <button class="cat-tab" data-category="broadcast-switching">Broadcast & Switching</button>
+    <button class="cat-tab" data-category="creative-graphics">Creative & Graphics</button>
+    <button class="cat-tab" data-category="management">Management & Direction</button>
+  </div>
+</div>
+
+<!-- SUB FILTERS (change based on active tab) -->
+<div class="sub-filters">
+  <div class="sub-filters-inner" id="sub-filters-inner">
+    <!-- populated by JS -->
+  </div>
+</div>
+
+<!-- LOCATION -->
+<div class="location-bar">
+  <div class="location-bar-inner">
+    <span class="sub-label">Location:</span>
+    <button class="filter-pill" data-filter="location" data-value="new-york">New York</button>
+    <button class="filter-pill" data-filter="location" data-value="los-angeles">Los Angeles</button>
+    <button class="filter-pill" data-filter="location" data-value="miami">Miami</button>
+    <button class="filter-pill" data-filter="location" data-value="orlando">Orlando</button>
+    <button class="filter-pill" data-filter="location" data-value="nashville">Nashville</button>
+    <button class="filter-pill" data-filter="location" data-value="chicago">Chicago</button>
+    <button class="filter-pill" data-filter="location" data-value="london">London</button>
+    <button class="filter-pill" data-filter="location" data-value="colombia">Colombia</button>
+    <button class="filter-pill" data-filter="location" data-value="touring">Touring / International</button>
   </div>
 </div>
 
@@ -302,23 +342,69 @@
 <script>
   const PAGE_SIZE = 12;
 
+  // Category definitions — what sub-filters show under each tab
+  const categories = {
+    'all': { label: 'Filter by Specialty', filters: [] },
+    'media-servers': {
+      label: 'Media Server Software',
+      filters: ['disguise','resolume','watchout','pixera','notch','aquilon','milumin']
+    },
+    'led': {
+      label: 'LED Gear',
+      filters: ['led-processing','brompton','megapixel-helios','novastar','pixelhue']
+    },
+    'projection': {
+      label: 'Projection Tools',
+      filters: ['projection','disguise','resolume','watchout','pixera','notch']
+    },
+    'broadcast-switching': {
+      label: 'Broadcast & Switching Gear',
+      filters: ['atem','barco-e2','barco-e3','unreal']
+    },
+    'creative-graphics': {
+      label: 'Creative Tools',
+      filters: ['notch','unreal','resolume','pixera']
+    },
+    'management': {
+      label: 'Role',
+      filters: ['technical-director','graphics-operator','creative-developer','trainer']
+    }
+  };
+
+  // Filter labels for display
+  const filterLabels = {
+    'disguise': 'Disguise', 'resolume': 'Resolume', 'watchout': 'Watchout',
+    'pixera': 'Pixera', 'notch': 'Notch', 'aquilon': 'Aquilon',
+    'milumin': 'Milumin', 'led-processing': 'LED Processing',
+    'brompton': 'Brompton Tessera', 'megapixel-helios': 'Megapixel Helios',
+    'novastar': 'Novastar', 'pixelhue': 'PixelHue', 'projection': 'Projection',
+    'atem': 'ATEM', 'barco-e2': 'Barco E2', 'barco-e3': 'Barco E3',
+    'unreal': 'Unreal', 'technical-director': 'Technical Director',
+    'graphics-operator': 'Graphics Operator', 'creative-developer': 'Creative Developer',
+    'trainer': 'Trainer'
+  };
+
   const professionals = [
-    { name: "Zamir Zeigler",  role: "media-server video-engineer projectionist",      expertise: "disguise barco-e2 aquilon pixera pixelhue projection",  location: "miami",       title: "Media Server Op · Video Engineer · Projectionist", photo: "images/zamir-zeigler-headshot.jpg", profile: "zamir-zeigler-profile.html", position: "75% 10%",   tags: ["Disguise","Barco E2","Projection"] },
-    { name: "Marcus Webb",    role: "media-server technical-director",                expertise: "disguise resolume watchout",                            location: "new-york",    title: "Media Server Specialist",                          photo: "images/test1.jpg",                 profile: "test1-profile.html",         position: "center top", tags: ["Disguise","Resolume"] },
-    { name: "Priya Nair",     role: "video-engineer broadcast",                       expertise: "disguise barco-e2 notch led-processing",                location: "los-angeles", title: "Video Engineer",                                   photo: "images/test2.jpg",                 profile: "test2-profile.html",         position: "center top", tags: ["Disguise","Notch"] },
-    { name: "Jordan Ellis",   role: "technical-director media-server",                expertise: "disguise barco-e2 barco-e3",                            location: "chicago",     title: "Technical Director",                               photo: "images/test3.jpg",                 profile: "test3-profile.html",         position: "center top", tags: ["Disguise","Barco E2"] },
-    { name: "Simone Blake",   role: "projectionist creative-developer",               expertise: "notch resolume disguise projection",                    location: "nashville",   title: "Projectionist · Creative Developer",               photo: "images/test4.jpg",                 profile: "test4-profile.html",         position: "center 10%", tags: ["Notch","Projection"] },
-    { name: "Kevin Liang",    role: "broadcast technical-director",                   expertise: "disguise barco-e2 atem",                                location: "new-york",    title: "Broadcast Engineer",                               photo: "images/test5.jpg",                 profile: "test5-profile.html",         position: "center top", tags: ["Disguise","ATEM"] },
-    { name: "Andre Collins",  role: "technical-director led-technician",              expertise: "disguise barco-e3 led-processing",                      location: "los-angeles", title: "Technical Director",                               photo: "images/test6.jpg",                 profile: "test6-profile.html",         position: "center top", tags: ["Disguise","LED Processing"] },
-    { name: "Zara Okafor",    role: "media-server graphics-operator",                 expertise: "disguise notch resolume",                               location: "new-york",    title: "Media Server Op · Graphics Operator",              photo: "images/test7.jpg",                 profile: "test7-profile.html",         position: "center top", tags: ["Disguise","Notch"] },
-    { name: "Ryan Castillo",  role: "led-technician technical-director",              expertise: "led-processing barco-e2 pixelhue disguise",             location: "nashville",   title: "LED Technician",                                   photo: "images/test8.jpg",                 profile: "test8-profile.html",         position: "80% 15%",    tags: ["LED Processing","PixelHue"] },
-    { name: "Elliot Crane",   role: "video-engineer technical-director",              expertise: "disguise barco-e2 notch unreal",                        location: "los-angeles", title: "Video Engineer",                                   photo: "images/test9.jpg",                 profile: "test9-profile.html",         position: "center 15%", tags: ["Disguise","Unreal"] },
-    { name: "Dana Mercer",    role: "broadcast camera-operator",                      expertise: "atem disguise",                                         location: "new-york",    title: "Broadcast Engineer · Camera Operator",             photo: "images/test10.jpg",                profile: "test10-profile.html",        position: "center 10%", tags: ["Broadcast","ATEM"] },
-    { name: "Yuki Tanaka",    role: "technical-director media-server",                expertise: "disguise pixera resolume",                              location: "los-angeles", title: "Production Coordinator",                           photo: "images/test11.jpg",                profile: "test11-profile.html",        position: "center top", tags: ["Disguise","Pixera"] },
-    { name: "Nabil Karimi",   role: "projectionist creative-developer",               expertise: "notch disguise resolume pixera",                        location: "new-york",    title: "Projectionist · Creative Developer",               photo: "images/test12.jpg",                profile: "test12-profile.html",        position: "center top", tags: ["Notch","Pixera"] },
+    { name: "Zamir Zeigler",   category: "media-servers projection",       role: "media-server video-engineer projectionist",    expertise: "disguise barco-e2 aquilon pixera pixelhue projection milumin", location: "miami",       title: "Media Server Op · Video Engineer · Projectionist", photo: "images/zamir-zeigler-headshot.jpg",    profile: "zamir-zeigler-profile.html",  position: "75% 10%",   tags: ["Disguise","Aquilon","Projection"] },
+    { name: "Jason Galayda",   category: "led media-servers",              role: "led-technician media-server",                  expertise: "disguise resolume brompton megapixel-helios novastar milumin led-processing", location: "colombia", title: "LED Technician · Media Server Op", photo: "images/jason-galayda-headshot.jpeg", profile: "jason-galayda-profile.html",  position: "center top", tags: ["LED Processing","Brompton","Disguise"] },
+    { name: "Melinda Sihalath", category: "media-servers",   role: "media-server technical-director", expertise: "disguise milumin led-processing", location: "nashville", title: "Media Server Specialist", photo: "images/melinda-sihalath-headshot.jpg", profile: "melinda-sihalath-profile.html", position: "center top", tags: ["Disguise","Milumin"] },
+    { name: "Marcus Webb",     category: "media-servers",                  role: "media-server technical-director",              expertise: "disguise resolume watchout",                   location: "new-york",    title: "Media Server Specialist",          photo: "images/test1.jpg",                  profile: "test1-profile.html",          position: "center top", tags: ["Disguise","Resolume"] },
+    { name: "Priya Nair",      category: "broadcast-switching media-servers", role: "video-engineer broadcast",               expertise: "disguise barco-e2 notch led-processing",       location: "los-angeles", title: "Video Engineer",                   photo: "images/test2.jpg",                  profile: "test2-profile.html",          position: "center top", tags: ["Disguise","Notch"] },
+    { name: "Jordan Ellis",    category: "management media-servers",       role: "technical-director media-server",              expertise: "disguise barco-e2 barco-e3",                   location: "chicago",     title: "Technical Director",               photo: "images/test3.jpg",                  profile: "test3-profile.html",          position: "center top", tags: ["Disguise","Barco E2"] },
+    { name: "Simone Blake",    category: "projection creative-graphics",   role: "projectionist creative-developer",             expertise: "notch resolume disguise projection",           location: "nashville",   title: "Projectionist · Creative Developer",photo: "images/test4.jpg",                 profile: "test4-profile.html",          position: "center 10%", tags: ["Notch","Projection"] },
+    { name: "Kevin Liang",     category: "broadcast-switching",            role: "broadcast technical-director",                 expertise: "disguise barco-e2 atem",                       location: "new-york",    title: "Broadcast Engineer",               photo: "images/test5.jpg",                  profile: "test5-profile.html",          position: "center top", tags: ["Disguise","ATEM"] },
+    { name: "Andre Collins",   category: "led management",                 role: "technical-director led-technician",            expertise: "disguise barco-e3 led-processing",             location: "los-angeles", title: "Technical Director",               photo: "images/test6.jpg",                  profile: "test6-profile.html",          position: "center top", tags: ["Disguise","LED Processing"] },
+    { name: "Zara Okafor",     category: "media-servers creative-graphics",role: "media-server graphics-operator",               expertise: "disguise notch resolume",                      location: "new-york",    title: "Media Server Op · Graphics Operator",photo: "images/test7.jpg",                profile: "test7-profile.html",          position: "center top", tags: ["Disguise","Notch"] },
+    { name: "Ryan Castillo",   category: "led",                            role: "led-technician technical-director",             expertise: "led-processing barco-e2 pixelhue disguise",    location: "nashville",   title: "LED Technician",                   photo: "images/test8.jpg",                  profile: "test8-profile.html",          position: "80% 15%",    tags: ["LED Processing","PixelHue"] },
+    { name: "Elliot Crane",    category: "media-servers creative-graphics",role: "video-engineer technical-director",            expertise: "disguise barco-e2 notch unreal",               location: "los-angeles", title: "Video Engineer",                   photo: "images/test9.jpg",                  profile: "test9-profile.html",          position: "center 15%", tags: ["Disguise","Unreal"] },
+    { name: "Dana Mercer",     category: "broadcast-switching",            role: "broadcast camera-operator",                    expertise: "atem disguise",                                location: "new-york",    title: "Broadcast Engineer · Camera Operator",photo: "images/test10.jpg",              profile: "test10-profile.html",         position: "center 10%", tags: ["Broadcast","ATEM"] },
+    { name: "Yuki Tanaka",     category: "management media-servers",       role: "technical-director media-server",              expertise: "disguise pixera resolume",                     location: "los-angeles", title: "Production Coordinator",           photo: "images/test11.jpg",                 profile: "test11-profile.html",         position: "center top", tags: ["Disguise","Pixera"] },
+    { name: "Nabil Karimi",    category: "projection creative-graphics",   role: "projectionist creative-developer",             expertise: "notch disguise resolume pixera",               location: "new-york",    title: "Projectionist · Creative Developer",photo: "images/test12.jpg",                profile: "test12-profile.html",         position: "center top", tags: ["Notch","Pixera"] },
   ];
 
-  const activeFilters = { role: null, expertise: null, location: null };
+  let activeCategory = 'all';
+  let activeSubFilter = null;
+  let activeLocation = null;
   let currentPool = [];
   let visibleCount = 0;
   let isFiltering = false;
@@ -344,6 +430,32 @@
       </a>`;
   }
 
+  function renderSubFilters(category) {
+    const inner = document.getElementById('sub-filters-inner');
+    const cat = categories[category];
+    if (!cat || cat.filters.length === 0) {
+      inner.innerHTML = '<span class="sub-label" style="color:var(--ink-muted);font-style:italic;">Select a category above to filter by specialty</span>';
+      return;
+    }
+    inner.innerHTML = `<span class="sub-label">${cat.label}:</span>` +
+      cat.filters.map(f => `<button class="filter-pill${activeSubFilter === f ? ' active' : ''}" data-filter="sub" data-value="${f}">${filterLabels[f] || f}</button>`).join('');
+
+    inner.querySelectorAll('.filter-pill[data-filter="sub"]').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const val = pill.dataset.value;
+        if (activeSubFilter === val) {
+          activeSubFilter = null;
+          pill.classList.remove('active');
+        } else {
+          inner.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          activeSubFilter = val;
+        }
+        applyFilters();
+      });
+    });
+  }
+
   function renderGrid(list, limit) {
     const grid = document.getElementById('directory-grid');
     const shown = limit ? list.slice(0, limit) : list;
@@ -351,25 +463,31 @@
       ? shown.map(cardHTML).join('')
       : '<div class="no-results">No professionals match your filters.</div>';
     document.getElementById('count').textContent = list.length;
-    const loadMoreWrap = document.getElementById('load-more-wrap');
-    loadMoreWrap.style.display = (!isFiltering && list.length > visibleCount) ? 'block' : 'none';
+    document.getElementById('load-more-wrap').style.display =
+      (!isFiltering && list.length > visibleCount) ? 'block' : 'none';
   }
 
   function applyFilters() {
     const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
-    isFiltering = !!(searchTerm || activeFilters.role || activeFilters.expertise || activeFilters.location);
+    isFiltering = !!(searchTerm || activeSubFilter || activeLocation || activeCategory !== 'all');
+
+    const filtered = professionals.filter(p => {
+      const matchSearch = !searchTerm ||
+        p.name.toLowerCase().includes(searchTerm) ||
+        p.role.includes(searchTerm) ||
+        p.expertise.includes(searchTerm) ||
+        p.location.includes(searchTerm) ||
+        p.title.toLowerCase().includes(searchTerm);
+      const matchCat = activeCategory === 'all' || p.category.includes(activeCategory);
+      const matchSub = !activeSubFilter || p.expertise.includes(activeSubFilter) || p.role.includes(activeSubFilter);
+      const matchLoc = !activeLocation || p.location.includes(activeLocation);
+      return matchSearch && matchCat && matchSub && matchLoc;
+    });
 
     if (isFiltering) {
-      const filtered = professionals.filter(p => {
-        const matchSearch = !searchTerm || p.name.toLowerCase().includes(searchTerm) || p.role.includes(searchTerm) || p.expertise.includes(searchTerm) || p.location.includes(searchTerm) || p.title.toLowerCase().includes(searchTerm);
-        const matchRole = !activeFilters.role || p.role.includes(activeFilters.role);
-        const matchExpertise = !activeFilters.expertise || p.expertise.includes(activeFilters.expertise);
-        const matchLocation = !activeFilters.location || p.location.includes(activeFilters.location);
-        return matchSearch && matchRole && matchExpertise && matchLocation;
-      });
       renderGrid(filtered, null);
     } else {
-      renderGrid(currentPool, visibleCount);
+      renderGrid(shuffle(professionals), PAGE_SIZE);
     }
   }
 
@@ -380,24 +498,42 @@
 
   function clearAll() {
     document.getElementById('search-input').value = '';
-    document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
-    Object.keys(activeFilters).forEach(k => activeFilters[k] = null);
+    activeCategory = 'all';
+    activeSubFilter = null;
+    activeLocation = null;
     isFiltering = false;
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.cat-tab[data-category="all"]').classList.add('active');
+    document.querySelectorAll('.filter-pill[data-filter="location"]').forEach(p => p.classList.remove('active'));
+    renderSubFilters('all');
+    currentPool = shuffle(professionals);
     visibleCount = Math.min(PAGE_SIZE, currentPool.length);
     renderGrid(currentPool, visibleCount);
   }
 
-  document.querySelectorAll('.filter-pill').forEach(pill => {
+  // Category tab clicks
+  document.querySelectorAll('.cat-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeCategory = tab.dataset.category;
+      activeSubFilter = null;
+      renderSubFilters(activeCategory);
+      applyFilters();
+    });
+  });
+
+  // Location pill clicks
+  document.querySelectorAll('.filter-pill[data-filter="location"]').forEach(pill => {
     pill.addEventListener('click', () => {
-      const filterType = pill.dataset.filter;
-      const value = pill.dataset.value;
-      if (pill.classList.contains('active')) {
+      const val = pill.dataset.value;
+      if (activeLocation === val) {
+        activeLocation = null;
         pill.classList.remove('active');
-        activeFilters[filterType] = null;
       } else {
-        document.querySelectorAll(`.filter-pill[data-filter="${filterType}"]`).forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.filter-pill[data-filter="location"]').forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
-        activeFilters[filterType] = value;
+        activeLocation = val;
       }
       applyFilters();
     });
@@ -405,9 +541,10 @@
 
   document.getElementById('search-input').addEventListener('input', applyFilters);
 
-  // Init — shuffle and show first 12
+  // Init
   currentPool = shuffle(professionals);
   visibleCount = Math.min(PAGE_SIZE, currentPool.length);
+  renderSubFilters('all');
   renderGrid(currentPool, visibleCount);
 </script>
 
