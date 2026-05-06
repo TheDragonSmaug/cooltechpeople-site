@@ -317,6 +317,7 @@
     <button class="filter-pill" data-filter="location" data-value="new-york">New York</button>
     <button class="filter-pill" data-filter="location" data-value="los-angeles">Los Angeles</button>
     <button class="filter-pill" data-filter="location" data-value="miami">Miami</button>
+          <button class="filter-pill" data-filter="location" data-value="houston">Houston</button>
           <button class="filter-pill" data-filter="location" data-value="atlanta">Atlanta</button>
           <button class="filter-pill" data-filter="location" data-value="richmond">Richmond</button>
     <button class="filter-pill" data-filter="location" data-value="orlando">Orlando</button>
@@ -350,7 +351,7 @@
     'all': { label: 'Filter by Specialty', filters: [] },
     'media-servers': {
       label: 'Media Server Software',
-      filters: ['disguise','resolume','watchout','pixera','millumin','lightact','pixelhue']
+      filters: ['disguise','resolume','watchout','pixera','millumin','lightact','pixelhue','pandoras-box']
     },
     'led': {
       label: 'LED Gear',
@@ -366,7 +367,7 @@
     },
     'creative-graphics': {
       label: 'Creative Tools',
-      filters: ['notch','unreal','graphics-operator']
+      filters: ['notch','unreal','graphics-operator','touch-designer']
     },
     'management': {
       label: 'Role',
@@ -389,7 +390,7 @@
     'unreal': 'Unreal', 'technical-director': 'Technical Director',
     'graphics-operator': 'Graphics Operator', 'creative-developer': 'Creative Developer',
     'trainer': 'Trainer', 'disguise-certified-trainer': 'Disguise Certified Trainer',
-    'stage-manager': 'Stage Manager', 'technical-director': 'Technical Director',
+    'stage-manager': 'Stage Manager', 'touch-designer': 'Touch Designer', 'pandoras-box': "Pandora's Box", 'technical-director': 'Technical Director',
     'lightact': 'LightAct', 'show-control': 'Show Control',
     'disguise-omnical': 'Disguise | Omnical',
     'projection-mapping': 'Projection Mapping', 'screens-production': 'Screens Production'
@@ -397,6 +398,7 @@
 
   const professionals = [
     { name: "Scott Lau",       category: "management media-servers broadcast-switching trainer", role: "technical-director media-server", expertise: "disguise disguise-certified-trainer aquilon millumin barco-e2 atem ross-carbonite camera-directing", location: "atlanta", title: "Technical Project Manager · Disguise", photo: "images/scott-lau-headshot.jpg", profile: "scott-lau-profile.html", position: "center top", tags: ["Disguise","Aquilon","ATEM"] },
+    { name: "Clay Avery",      category: "media-servers creative-graphics trainer",     role: "media-server projectionist creative-developer",  expertise: "disguise disguise-certified-trainer pixera touch-designer pandoras-box", location: "houston",     title: "Media Server Specialist · Disguise Certified Trainer", photo: "images/clay-avery-headshot.jpg",        profile: "clay-avery-profile.html",     position: "35% 15%",   tags: ["Disguise","Pixera","Touch Designer"] },
     { name: "Zamir Zeigler",   category: "media-servers projection broadcast-switching",       role: "media-server video-engineer projectionist",    expertise: "disguise barco-e2 aquilon pixera pixelhue projection millumin", location: "miami",        title: "Media Server Op · Video Engineer · Projectionist", photo: "images/zamir-zeigler-headshot.jpg",     profile: "zamir-zeigler-profile.html",  position: "75% 10%",   tags: ["Disguise","Aquilon","Projection"] },
     { name: "Tatton Jacob",    category: "projection media-servers trainer",        role: "projectionist trainer media-server",           expertise: "disguise disguise-omnical disguise-certified-trainer lightact show-control projection-mapping screens-production large-volume-projection", location: "richmond", title: "Projectionist · Trainer · Media Server Op", photo: "images/tatton-jacob-headshot.jpg",      profile: "tatton-jacob-profile.html",   position: "center top", tags: ["Disguise","Large Volume Projection","LightAct"] },
     { name: "Jason Galayda",   category: "led media-servers",              role: "led-technician media-server",                  expertise: "disguise resolume brompton megapixel-helios novastar millumin led-processing", location: "colombia",  title: "LED Technician · Media Server Op",          photo: "images/jason-galayda-headshot.jpg",     profile: "jason-galayda-profile.html",  position: "center top", tags: ["LED Processing","Brompton","Disguise"] },
