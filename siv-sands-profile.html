@@ -114,7 +114,7 @@
   .col-contact { border-right: none; }
 
   .col-label {
-    font-size: 10px; letter-spacing: 0.25em;
+    font-size: 12px; letter-spacing: 0.25em;
     text-transform: uppercase; color: var(--ink-muted);
     margin-bottom: 2rem;
     padding-bottom: 1rem;
@@ -145,23 +145,28 @@
     grid-column: 1 / 3;
   }
   .profile-title-large {
-    font-size: 11px; letter-spacing: 0.18em;
+    font-size: 12px; letter-spacing: 0.18em;
     text-transform: uppercase; color: var(--ink-muted);
     text-align: right;
   }
 
-  /* EXPERTISE TAGS */
-  .expertise-tags { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
-  .expertise-tag {
-    padding: 0.4rem 0.8rem;
-    border: 0.5px solid rgba(26,24,20,0.2);
-    font-size: 11px; letter-spacing: 0.1em;
-    text-transform: uppercase; color: var(--ink-light);
-    display: inline-block;
+    /* EXPERTISE CATEGORIES */
+  .expertise-categories { display: flex; flex-direction: column; gap: 1.4rem; margin-bottom: 2rem; }
+  .expertise-category-label {
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-muted);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 0.5px solid rgba(26,24,20,0.08);
   }
-  .expertise-tag.primary {
-    background: var(--ink); color: var(--bone);
-    border-color: var(--ink);
+  .expertise-tag-group { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .expertise-tag {
+    padding: 0.3rem 0.7rem;
+    border: 0.5px solid var(--accent);
+    background: var(--accent);
+    font-size: 10px; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--bone);
+    display: inline-block;
   }
 
   /* BIO */
@@ -205,17 +210,18 @@
   }
   .contact-value a:hover { border-color: var(--ink); }
 
-  .share-btn {
+    .share-btn {
     display: inline-block; margin-top: 2rem;
     padding: 0.75rem 1.5rem;
-    border: 0.5px solid var(--ink);
+    border: 0.5px solid #4a4845;
+    background: #4a4845;
     font-size: 10px; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--ink);
-    cursor: pointer; background: transparent;
+    text-transform: uppercase; color: var(--bone);
+    cursor: pointer;
     font-family: 'DM Sans', sans-serif;
     transition: all 0.2s; width: 100%; text-align: center;
   }
-  .share-btn:hover { background: var(--ink); color: var(--bone); }
+  .share-btn:hover { background: var(--accent); border-color: var(--accent); color: var(--bone); }
 
   /* FOOTER */
   footer {
@@ -262,15 +268,39 @@
   <!-- COL 2: EXPERTISE & BIO -->
   <div class="col-expertise">
     <div class="col-label">Expertise</div>
-    <div class="expertise-tags">
-      <span class="expertise-tag primary">Media Servers</span>
-      <span class="expertise-tag primary">Projection Design</span>
-      <span class="expertise-tag">Disguise</span>
-      <span class="expertise-tag">Notch</span>
-      <span class="expertise-tag">Vectorworks</span>
-      <span class="expertise-tag">Video Systems</span>
-      <span class="expertise-tag">Technical Direction</span>
-      <span class="expertise-tag">Installations</span>
+        <div class="expertise-categories">
+
+      <div class="expertise-category">
+        <div class="expertise-category-label">Media Servers</div>
+        <div class="expertise-tag-group">
+          <span class="expertise-tag">Disguise</span>
+          <span class="expertise-tag">Pixera</span>
+        </div>
+      </div>
+
+      <div class="expertise-category">
+        <div class="expertise-category-label">Creative & Graphics</div>
+        <div class="expertise-tag-group">
+          <span class="expertise-tag">Notch</span>
+        </div>
+      </div>
+
+      <div class="expertise-category">
+        <div class="expertise-category-label">Projection</div>
+        <div class="expertise-tag-group">
+          <span class="expertise-tag">Projection Mapping</span>
+        </div>
+      </div>
+
+      <div class="expertise-category">
+        <div class="expertise-category-label">Production</div>
+        <div class="expertise-tag-group">
+          <span class="expertise-tag">Touring</span>
+          <span class="expertise-tag">Installations</span>
+          <span class="expertise-tag">Corporate</span>
+        </div>
+      </div>
+
     </div>
     <div class="bio-text">
       Siv is a creative and technically skilled media server specialist and projection designer based in London. With deep expertise in Disguise, Notch, and Vectorworks, she brings both artistic vision and precise technical execution to live events, installations, and touring productions across Europe and beyond.
