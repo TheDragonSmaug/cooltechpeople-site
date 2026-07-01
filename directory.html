@@ -215,6 +215,11 @@
     text-transform: uppercase; color: var(--ink-muted); margin-bottom: 0.2rem;
   }
   .profile-location {
+    font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--accent); opacity: 0.8;
+    margin-bottom: 0.2rem;
+  }
+  .profile-location {
     font-size: 11px; color: var(--ink-muted); letter-spacing: 0.06em;
   }
   .profile-tags {
@@ -313,19 +318,16 @@
 <!-- LOCATION -->
 <div class="location-bar">
   <div class="location-bar-inner">
-    <span class="sub-label">Location:</span>
-    <button class="filter-pill" data-filter="location" data-value="new-york">New York</button>
-    <button class="filter-pill" data-filter="location" data-value="los-angeles">Los Angeles</button>
-    <button class="filter-pill" data-filter="location" data-value="miami">Miami</button>
-          <button class="filter-pill" data-filter="location" data-value="houston">Houston</button>
-          <button class="filter-pill" data-filter="location" data-value="atlanta">Atlanta</button>
-          <button class="filter-pill" data-filter="location" data-value="richmond">Richmond</button>
-    <button class="filter-pill" data-filter="location" data-value="orlando">Orlando</button>
-    <button class="filter-pill" data-filter="location" data-value="nashville">Nashville</button>
-          <button class="filter-pill" data-filter="location" data-value="tennessee">Tennessee</button>
-    <button class="filter-pill" data-filter="location" data-value="chicago">Chicago</button>
-    <button class="filter-pill" data-filter="location" data-value="london">London</button>
-    <button class="filter-pill" data-filter="location" data-value="colombia">Colombia</button>
+    <span class="sub-label">Region:</span>
+    <button class="filter-pill" data-filter="location" data-value="northeast">Northeast US</button>
+    <button class="filter-pill" data-filter="location" data-value="southeast">Southeast US</button>
+    <button class="filter-pill" data-filter="location" data-value="midwest">Midwest US</button>
+    <button class="filter-pill" data-filter="location" data-value="southwest">Southwest US</button>
+    <button class="filter-pill" data-filter="location" data-value="west-coast">West Coast US</button>
+    <button class="filter-pill" data-filter="location" data-value="europe">Europe</button>
+    <button class="filter-pill" data-filter="location" data-value="latin-america">Latin America</button>
+    <button class="filter-pill" data-filter="location" data-value="asia-pacific">Asia Pacific</button>
+    <button class="filter-pill" data-filter="location" data-value="middle-east">Middle East & Africa</button>
     <button class="filter-pill" data-filter="location" data-value="touring">Touring / International</button>
   </div>
 </div>
@@ -397,17 +399,17 @@
   };
 
   const professionals = [
-    { name: "Scott Lau",       category: "management media-servers broadcast-switching trainer", role: "technical-director media-server", expertise: "disguise disguise-certified-trainer aquilon millumin barco-e2 atem ross-carbonite camera-directing", location: "atlanta", title: "Technical Project Manager · Disguise", photo: "images/scott-lau-headshot.jpg", profile: "scott-lau-profile.html", position: "center top", tags: ["Disguise","Aquilon","ATEM"] },
-    { name: "Clay Avery",      category: "media-servers creative-graphics trainer",     role: "media-server projectionist creative-developer",  expertise: "disguise disguise-certified-trainer pixera touch-designer pandoras-box", location: "houston",     title: "Media Server Specialist · Disguise Certified Trainer", photo: "images/clay-avery-headshot.jpg",        profile: "clay-avery-profile.html",     position: "35% 15%",   tags: ["Disguise","Pixera","Touch Designer"] },
-    { name: "Zamir Zeigler",   category: "media-servers projection broadcast-switching",       role: "media-server video-engineer projectionist",    expertise: "disguise barco-e2 aquilon pixera pixelhue projection millumin", location: "miami",        title: "Media Server Op · Video Engineer · Projectionist", photo: "images/zamir-zeigler-headshot.jpg",     profile: "zamir-zeigler-profile.html",  position: "75% 10%",   tags: ["Disguise","Aquilon","Projection"] },
-    { name: "Tatton Jacob",    category: "projection media-servers trainer",        role: "projectionist trainer media-server",           expertise: "disguise disguise-omnical disguise-certified-trainer lightact show-control projection-mapping screens-production large-volume-projection", location: "richmond", title: "Projectionist · Trainer · Media Server Op", photo: "images/tatton-jacob-headshot.jpg",      profile: "tatton-jacob-profile.html",   position: "center top", tags: ["Disguise","Large Volume Projection","LightAct"] },
-    { name: "Jason Galayda",   category: "led media-servers",              role: "led-technician media-server",                  expertise: "disguise resolume brompton megapixel-helios novastar millumin led-processing", location: "colombia",  title: "LED Technician · Media Server Op",          photo: "images/jason-galayda-headshot.jpg",     profile: "jason-galayda-profile.html",  position: "center top", tags: ["LED Processing","Brompton","Disguise"] },
-    { name: "Jeff Daniels",    category: "media-servers broadcast-switching",           role: "technical-director media-server broadcast",     expertise: "disguise resolume led-processing",              location: "touring",     title: "Live Events Professional",                  photo: "images/jeff-daniels-headshot.jpg",      profile: "jeff-daniels-profile.html",   position: "center 15%", tags: ["Disguise","Broadcast"] },
-    { name: "Justin King",     category: "broadcast-switching media-servers",           role: "broadcast technical-director",                 expertise: "disguise barco-e2 notch atem",                  location: "orlando",     title: "Broadcast Engineer",                        photo: "images/justin-king-headshot.jpg",       profile: "justin-king-profile.html",    position: "center 30%", tags: ["Disguise","ATEM"] },
-    { name: "Luke Lay",        category: "broadcast-switching media-servers",           role: "broadcast technical-director",                 expertise: "disguise analog-way barco-e2 atem",             location: "nashville",   title: "Broadcast Engineer",                        photo: "images/luke-lay-headshot.jpg",          profile: "luke-lay-profile.html",       position: "20% 15%",    tags: ["Disguise","Analog Way"] },
-    { name: "Siv Sands",       category: "media-servers projection",                   role: "media-server projectionist",                   expertise: "disguise notch pixera",                         location: "london",      title: "Media Server Specialist",                   photo: "images/siv-sands-headshot.jpg",         profile: "siv-sands-profile.html",      position: "center top", tags: ["Disguise","Notch"] },
-    { name: "Andy Rivas",      category: "media-servers broadcast-switching",           role: "media-server technical-director",               expertise: "disguise barco-e2",                             location: "touring",     title: "Live Events Professional",                  photo: "images/andy-rivas-headshot.jpg",        profile: "andy-rivas-profile.html",     position: "center top", tags: ["Disguise","Barco E2"] },
-    { name: "Melinda Sihalath",category: "media-servers",                   role: "media-server",                                 expertise: "disguise millumin",                                             location: "tennessee",    title: "Media Server Specialist",                   photo: "images/melinda-sihalath-headshot.jpg",  profile: "melinda-sihalath-profile.html",position: "center top", tags: ["Disguise","Millumin"] },
+    { name: "Scott Lau", regionLabel: "Southeast US",       category: "management media-servers broadcast-switching trainer", role: "technical-director media-server", expertise: "disguise disguise-certified-trainer aquilon millumin barco-e2 atem ross-carbonite camera-directing", location: "southeast", title: "Technical Project Manager · Disguise", photo: "images/scott-lau-headshot.jpg", profile: "scott-lau-profile.html", position: "center top", tags: ["Disguise","Aquilon","ATEM"] },
+    { name: "Clay Avery", regionLabel: "Southwest US",      category: "media-servers creative-graphics trainer",     role: "media-server projectionist creative-developer",  expertise: "disguise disguise-certified-trainer pixera touch-designer pandoras-box", location: "southwest",     title: "Media Server Specialist · Disguise Certified Trainer", photo: "images/clay-avery-headshot.jpg",        profile: "clay-avery-profile.html",     position: "35% 15%",   tags: ["Disguise","Pixera","Touch Designer"] },
+    { name: "Zamir Zeigler", regionLabel: "Southeast US",   category: "media-servers projection broadcast-switching",       role: "media-server video-engineer projectionist",    expertise: "disguise barco-e2 aquilon pixera pixelhue projection millumin", location: "southeast",        title: "Media Server Op · Video Engineer · Projectionist", photo: "images/zamir-zeigler-headshot.jpg",     profile: "zamir-zeigler-profile.html",  position: "75% 10%",   tags: ["Disguise","Aquilon","Projection"] },
+    { name: "Tatton Jacob", regionLabel: "Southeast US",    category: "projection media-servers trainer",        role: "projectionist trainer media-server",           expertise: "disguise disguise-omnical disguise-certified-trainer lightact show-control projection-mapping screens-production large-volume-projection", location: "southeast", title: "Projectionist · Trainer · Media Server Op", photo: "images/tatton-jacob-headshot.jpg",      profile: "tatton-jacob-profile.html",   position: "center top", tags: ["Disguise","Large Volume Projection","LightAct"] },
+    { name: "Jason Galayda", regionLabel: "Latin America",   category: "led media-servers",              role: "led-technician media-server",                  expertise: "disguise resolume brompton megapixel-helios novastar millumin led-processing", location: "latin-america",  title: "LED Technician · Media Server Op",          photo: "images/jason-galayda-headshot.jpg",     profile: "jason-galayda-profile.html",  position: "center top", tags: ["LED Processing","Brompton","Disguise"] },
+    { name: "Jeff Daniels", regionLabel: "Touring / International",    category: "media-servers broadcast-switching",           role: "technical-director media-server broadcast",     expertise: "disguise resolume led-processing",              location: "touring",     title: "Live Events Professional",                  photo: "images/jeff-daniels-headshot.jpg",      profile: "jeff-daniels-profile.html",   position: "center 15%", tags: ["Disguise","Broadcast"] },
+    { name: "Justin King", regionLabel: "Southeast US",     category: "broadcast-switching media-servers",           role: "broadcast technical-director",                 expertise: "disguise barco-e2 notch atem",                  location: "southeast",   title: "Broadcast Engineer",                        photo: "images/justin-king-headshot.jpg",       profile: "justin-king-profile.html",    position: "center 30%", tags: ["Disguise","ATEM"] },
+    { name: "Luke Lay", regionLabel: "Southeast US",        category: "broadcast-switching media-servers",           role: "broadcast technical-director",                 expertise: "disguise analog-way barco-e2 atem",             location: "southeast",   title: "Broadcast Engineer",                        photo: "images/luke-lay-headshot.jpg",          profile: "luke-lay-profile.html",       position: "20% 15%",    tags: ["Disguise","Analog Way"] },
+    { name: "Siv Sands", regionLabel: "Europe",       category: "media-servers projection",                   role: "media-server projectionist",                   expertise: "disguise notch pixera",                         location: "europe",      title: "Media Server Specialist",                   photo: "images/siv-sands-headshot.jpg",         profile: "siv-sands-profile.html",      position: "center top", tags: ["Disguise","Notch"] },
+    { name: "Andy Rivas", regionLabel: "Touring / International",      category: "media-servers broadcast-switching",           role: "media-server technical-director",               expertise: "disguise barco-e2",                             location: "touring",     title: "Live Events Professional",                  photo: "images/andy-rivas-headshot.jpg",        profile: "andy-rivas-profile.html",     position: "center top", tags: ["Disguise","Barco E2"] },
+    { name: "Melinda Sihalath", regionLabel: "Southeast US",category: "media-servers",                   role: "media-server",                                 expertise: "disguise millumin",                                             location: "southeast",    title: "Media Server Specialist",                   photo: "images/melinda-sihalath-headshot.jpg",  profile: "melinda-sihalath-profile.html",position: "center top", tags: ["Disguise","Millumin"] },
   ];
 
   let activeCategory = 'all';
@@ -434,6 +436,7 @@
         </div>
         <div class="profile-name">${p.name}</div>
         <div class="profile-role">${p.title}</div>
+        <div class="profile-location">${p.regionLabel}</div>
         <div class="profile-tags">${p.tags.map(t => `<span class="profile-tag">${t}</span>`).join('')}</div>
       </a>`;
   }
