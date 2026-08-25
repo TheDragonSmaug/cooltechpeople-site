@@ -5,8 +5,7 @@
   "photo": "images/scott-lau-headshot.jpg",
   "photoPosition": "center top",
   "city": "Atlanta, GA",
-  "region": "southeast",
-  "regionLabel": "Southeast US",
+  "country": "USA",
   "categories": ["media-servers", "broadcast-switching", "trainer"],
   "roleTags": ["technical-director", "media-server"],
   "expertise": {
