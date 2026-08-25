@@ -5,8 +5,7 @@
   "photo": "images/luke-lay-headshot.jpg",
   "photoPosition": "20% 15%",
   "city": "Daytona Beach, FL",
-  "region": "southeast",
-  "regionLabel": "Southeast US",
+  "country": "USA",
   "categories": ["broadcast-switching", "media-servers"],
   "roleTags": ["broadcast", "technical-director"],
   "expertise": {
