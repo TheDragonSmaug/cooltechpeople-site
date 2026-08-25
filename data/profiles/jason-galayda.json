@@ -5,8 +5,7 @@
   "photo": "images/jason-galayda-headshot.jpg",
   "photoPosition": "center top",
   "city": "Medellín, Colombia",
-  "region": "latin-america",
-  "regionLabel": "Latin America",
+  "country": "Colombia",`
   "categories": ["led", "media-servers"],
   "roleTags": ["led-technician", "media-server"],
   "expertise": {
