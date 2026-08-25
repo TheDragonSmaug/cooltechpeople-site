@@ -5,8 +5,7 @@
   "photo": "images/tatton-jacob-headshot.jpg",
   "photoPosition": "center 20%",
   "city": "Richmond, VA",
-  "region": "southeast",
-  "regionLabel": "Southeast US",
+  "country": "USA",
   "categories": ["projection", "media-servers", "trainer"],
   "roleTags": ["projectionist", "trainer", "media-server"],
   "expertise": {
