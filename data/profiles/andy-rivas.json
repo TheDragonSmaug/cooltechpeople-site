@@ -1,0 +1,38 @@
+{
+  "slug": "andy-rivas",
+  "name": "Andy Rivas",
+  "title": "Media Server Programmer · Disguise Specialist",
+  "photo": "images/andy-rivas-headshot.jpg",
+  "photoPosition": "center top",
+  "city": "Atlanta, GA",
+  "region": "southeast",
+  "regionLabel": "Southeast US",
+  "categories": ["media-servers", "broadcast-switching"],
+  "roleTags": ["media-server", "technical-director"],
+  "expertise": {
+    "Media Servers": ["Disguise", "Resolume"],
+    "Broadcast & Switching": ["Video Systems", "LED Systems", "Broadcast"],
+    "Creative & Graphics": ["Notch"],
+    "Projection": ["Projection Mapping"],
+    "Production": ["Technical Direction", "Touring", "Corporate"]
+  },
+  "cardTags": ["Disguise", "Barco E2"],
+  "bio": "Andy Rivas is a media server programmer with experience in live event production since 2012 and a focus on Disguise media servers since 2020. Specializing in live events, touring, corporate, and broadcast productions, he combines technical precision with practical problem-solving to build dependable media server and video workflows. He believes the best technology is the kind that disappears into the show — allowing audiences to focus on the experience rather than what's happening behind the scenes.",
+  "projects": [
+    { "title": "Lauren Daigle — World Tour (2021) & Kaleidoscope Tour (2023–2024)", "desc": "Disguise Programmer and Operator utilizing Notch effects, timecode, projection mapping, and LED across both world tours." },
+    { "title": "Vampire Weekend — Only God Was Above Us Tour (2025)", "desc": "Disguise Server Tech utilizing DMX control from GrandMA3 for seamless content integration throughout the tour." },
+    { "title": "Slayer — International Tour (2025–2026)", "desc": "Disguise Programmer and Operator utilizing OSC cue triggers to sync content with songs across an international run." },
+    { "title": "Hillsong United & Chris Tomlin Tour (2022)", "desc": "Disguise Programmer for Hillsong United and Tour Server Tech utilizing timecode and DMX triggers throughout the run." },
+    { "title": "Passion Conferences (2023, 2024, 2025)", "desc": "Member of the Disguise programming team utilizing Notch effects and DMX control from GrandMA3 across three consecutive years." },
+    { "title": "North Point Community Church — InsideOut Daytona (2021–2024)", "desc": "Lead Disguise Programmer and Operator for four consecutive years, utilizing Notch effects and timecode for this large-scale church production." },
+    { "title": "Corporate Live Events", "desc": "Lead Disguise Programmer for various large-scale corporate events, delivering reliable and polished video experiences for high-profile clients." }
+  ],
+  "contact": {
+    "email": "andy@ndyrvs.com",
+    "instagram": "https://www.instagram.com/ndyrvs/",
+    "linkedin": "https://www.linkedin.com/in/andyrivas/",
+    "website": null
+  },
+  "availableFor": "Touring · Corporate · Live Events · Broadcast",
+  "status": null
+}

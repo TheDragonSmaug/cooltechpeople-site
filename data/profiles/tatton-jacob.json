@@ -1,0 +1,35 @@
+{
+  "slug": "tatton-jacob",
+  "name": "Tatton Jacob",
+  "title": "Projectionist · Trainer · Media Server Op",
+  "photo": "images/tatton-jacob-headshot.jpg",
+  "photoPosition": "center 20%",
+  "city": "Richmond, VA",
+  "region": "southeast",
+  "regionLabel": "Southeast US",
+  "categories": ["projection", "media-servers", "trainer"],
+  "roleTags": ["projectionist", "trainer", "media-server"],
+  "expertise": {
+    "Media Servers": ["Disguise", "LightAct"],
+    "Projection": ["Large Volume Projection", "Projection Mapping", "Disguise | Omnical"],
+    "Creative & Graphics": ["Touch Designer"],
+    "Production": ["Installations", "Corporate", "Theater", "Touring"],
+    "Certified Trainers": ["Disguise Certified Trainer"]
+  },
+  "cardTags": ["Disguise", "Large Volume Projection", "LightAct"],
+  "bio": "Tatton spent an integral 6.5 years working directly for Disguise in the United States as a critical problem solver and lead training resource, working between show programmers, clients, and developers to gain familiarity across a wide variety and scale of shows — before eventually breaking into freelance to more tangibly affect shows during their full range of creation. Tack on an affinity for travel and 7+ years of touring before all of this and you'll find an extremely well-versed, level-headed under pressure and enjoyable (because why not) team member.",
+  "projects": [
+    { "title": "The Dwarf Grill — Chick-fil-A NEXT (2026)", "desc": "4D immersive experience incorporating projection, LED, scent, sound, lights, and web interaction for Brand Apart via Disguise. Full sensory environment design and integration." },
+    { "title": "The Tragedy of Coriolanus — Brooklyn (2026)", "desc": "Video playback, camera preset control, and live Touch Designer integration for Theater for a New Audience in Brooklyn with POSSIBLE via Disguise." },
+    { "title": "Domino Sugar Factory Projection — Brooklyn (2025)", "desc": "25+ 4K projector blend on the iconic Domino Sugar Factory for outdoor large-scale projection with ATD Visual via Disguise. Executed twice." },
+    { "title": "Top of the Rock Omnical — Rockefeller Center (2024)", "desc": "Permanent installation at Top of the Rock with Electrosonic and THG via Disguise and Omnical — one of New York's most visited observation experiences." }
+  ],
+  "contact": {
+    "email": "tatton@artofoptics.io",
+    "instagram": null,
+    "linkedin": "https://www.linkedin.com/in/tatton/",
+    "website": "Coming Soon — May 2026"
+  },
+  "availableFor": "Previsualization · Screens Production · Programming · Installations · Corporate · Live Events · Theater",
+  "status": null
+}

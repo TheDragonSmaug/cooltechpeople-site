@@ -1,0 +1,34 @@
+{
+  "slug": "clay-avery",
+  "name": "Clay Avery",
+  "title": "Media Server Specialist · Disguise Certified Trainer",
+  "photo": "images/clay-avery-headshot.jpg",
+  "photoPosition": "35% 15%",
+  "city": "Houston, TX",
+  "region": "southwest",
+  "regionLabel": "Southwest US",
+  "categories": ["media-servers", "trainer"],
+  "roleTags": ["media-server", "trainer"],
+  "expertise": {
+    "Media Servers": ["Disguise", "Pixera", "Pandora's Box"],
+    "Creative & Graphics": ["Touch Designer", "Notch"],
+    "Production": ["Touring", "Corporate", "Installations", "Consultations"],
+    "Certified Trainers": ["Disguise Certified Trainer"]
+  },
+  "cardTags": ["Disguise", "Pixera", "Certified Trainer"],
+  "bio": "With 12 years of high-level experience in media server operation and show control, Clay has become a go-to expert for driving pixel-perfect visuals. He has participated in the technical execution at some notable global conferences like Google Cloud Next and Oracle AI World, lead media programming for companies like Ford, Samsung, Deloitte, and Walmart, and helped bring to life large-scale productions such as the League of Legends Championship Series and WWE's Thunderdome. Clay is a certified Disguise trainer, with deep hands-on knowledge of Pandoras Box, Pixera, and Touch Designer — making him not just an operator, but a true systems-level thinker who knows how to deliver under pressure. Since founding his own business, Clayton Creative, in 2017, he's built a reputation for delivering uncompromising quality, precision, and creative problem-solving to every show he touches. Whether he's engineering a seamless content pipeline for a corporate event, or consulting on interactive installations, his role extends beyond technical execution.",
+  "projects": [
+    { "title": "Google Cloud Next", "desc": "Lead Pixera Programmer and Operator for Google's flagship annual cloud conference, managing all media server workflows and pixel-perfect content delivery across a large-scale production." },
+    { "title": "Oracle AI World", "desc": "Lead Pixera Programmer and Operator for Oracle's AI World conference, overseeing all media server programming and live operation for a high-profile global event." },
+    { "title": "Deloitte at Sphere Las Vegas", "desc": "Lead Disguise Programmer and Operator for Deloitte's production at the MSG Sphere in Las Vegas — one of the most technically demanding venues in the world." },
+    { "title": "League of Legends Championship & WWE Thunderdome", "desc": "Contributed to the technical execution of large-scale entertainment productions including the League of Legends Championship Series and WWE's Thunderdome, delivering complex media workflows under pressure." }
+  ],
+  "contact": {
+    "email": null,
+    "instagram": null,
+    "linkedin": "#",
+    "website": "https://www.claytoncreative.com"
+  },
+  "availableFor": "Corporate · Live Events · Installations · Consultations",
+  "status": null
+}

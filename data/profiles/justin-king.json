@@ -1,0 +1,34 @@
+{
+  "slug": "justin-king",
+  "name": "Justin King",
+  "title": "Broadcast Engineer",
+  "photo": "images/justin-king-headshot.jpg",
+  "photoPosition": "center 30%",
+  "city": "Orlando, FL",
+  "region": "southeast",
+  "regionLabel": "Southeast US",
+  "categories": ["broadcast-switching", "media-servers"],
+  "roleTags": ["broadcast", "technical-director"],
+  "expertise": {
+    "Media Servers": ["Disguise"],
+    "Broadcast & Switching": ["Barco E2", "ATEM"],
+    "Creative & Graphics": ["Notch"],
+    "Production": ["Touring", "Corporate", "Broadcast"]
+  },
+  "cardTags": ["Disguise", "ATEM"],
+  "bio": "Justin is an experienced broadcast engineer and live events professional with a strong command of Disguise, Barco, and Notch workflows. Whether managing a broadcast truck or running video systems for a live show, he brings the same sharp technical expertise and calm professionalism to every production.",
+  "projects": [
+    { "title": "Broadcast Productions", "desc": "Broadcast engineering for large-scale live productions, managing redundant video systems, real-time switching, and content delivery for global streaming audiences." },
+    { "title": "Corporate & Conference Events", "desc": "Technical lead for high-profile corporate events requiring broadcast-quality video output, multi-screen Barco setups, and precise real-time content management." },
+    { "title": "Live Concert & Tour Productions", "desc": "Broadcast engineer on major touring productions, adapting video and broadcast systems across venues while maintaining consistent output quality nightly." },
+    { "title": "Streaming & Virtual Events", "desc": "Technical director for live streaming and virtual event productions, managing end-to-end video workflows and ensuring broadcast-quality delivery for global online audiences." }
+  ],
+  "contact": {
+    "email": null,
+    "instagram": null,
+    "linkedin": "#",
+    "website": "justinking.com"
+  },
+  "availableFor": "Touring · Corporate · Broadcast · Live Events",
+  "status": null
+}

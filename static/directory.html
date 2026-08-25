@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Directory — Cool Tech People</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .page-header {
+    position: relative; z-index: 1;
+    padding: 8rem 3rem 2rem;
+    max-width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 0.5px solid rgba(26,24,20,0.1);
+  }
+  .page-header h1 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .result-count { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); }
+  .result-count span { color: var(--ink); font-weight: 500; }
+  .search-bar { position: relative; z-index: 1; background: rgba(245,243,238,0.93); border-bottom: 0.5px solid rgba(26,24,20,0.1); padding: 1.2rem 3rem; }
+  .search-bar-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0.75rem; align-items: center; }
+  .search-bar .search-wrap { flex: 1; display: flex; max-width: 480px; border: 0.5px solid var(--ink); }
+  .search-bar .search-wrap input { flex: 1; padding: 0.75rem 1rem; border: none; background: transparent; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 300; color: var(--ink); letter-spacing: 0.05em; }
+  .search-bar .search-wrap input::placeholder { color: var(--ink-muted); }
+  .search-bar .search-wrap input:focus { outline: none; }
+  .search-bar .search-wrap button { padding: 0.75rem 1.25rem; background: var(--accent); border: none; color: var(--bone); font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s; }
+  .search-bar .search-wrap button:hover { opacity: 0.85; }
+  .clear-btn { padding: 0.75rem 1.25rem; border: 0.5px solid rgba(26,24,20,0.2); background: transparent; color: var(--ink-muted); font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
+  .clear-btn:hover { color: var(--ink); border-color: var(--ink); }
+  .category-tabs { position: relative; z-index: 1; background: rgba(245,243,238,0.93); border-bottom: 0.5px solid rgba(26,24,20,0.1); }
+  .category-tabs-inner { max-width: 1200px; margin: 0 auto; display: flex; overflow-x: auto; scrollbar-width: none; }
+  .category-tabs-inner::-webkit-scrollbar { display: none; }
+  .cat-tab { padding: 1.1rem 1.8rem; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-muted); cursor: pointer; background: transparent; border: none; border-bottom: 2px solid transparent; font-family: 'DM Sans', sans-serif; white-space: nowrap; transition: all 0.2s; margin-bottom: -0.5px; }
+  .cat-tab:hover { color: var(--ink); }
+  .cat-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 500; }
+  .sub-filters { position: relative; z-index: 1; background: transparent; border-bottom: 0.5px solid rgba(26,24,20,0.1); padding: 0.9rem 3rem; min-height: 52px; }
+  .sub-filters-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; }
+  .sub-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-muted); margin-right: 0.5rem; white-space: nowrap; }
+  .sub-filters .filter-pill, .location-bar .filter-pill { padding: 0.25rem 0.75rem; border: 0.5px solid rgba(26,24,20,0.2); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-light); cursor: pointer; background: transparent; transition: all 0.2s; font-family: 'DM Sans', sans-serif; white-space: nowrap; }
+  .sub-filters .filter-pill:hover, .location-bar .filter-pill:hover { border-color: var(--accent); color: var(--accent); }
+  .sub-filters .filter-pill.active, .location-bar .filter-pill.active { background: var(--accent); color: var(--bone); border-color: var(--accent); }
+  .location-bar { position: relative; z-index: 1; background: transparent; border-bottom: 0.5px solid rgba(26,24,20,0.06); padding: 0.7rem 3rem; }
+  .location-bar-inner { max-width: 1200px; margin: 0 auto; display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; }
+  .directory { position: relative; z-index: 1; padding: 3rem; max-width: 1200px; margin: 0 auto; }
+  .directory-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; }
+  .directory .profile-photo { width: 100%; height: 280px; margin-bottom: 1rem; }
+  .directory .profile-photo img { object-position: center 10%; }
+  .no-results { grid-column: 1/-1; text-align: center; padding: 4rem 0; color: var(--ink-muted); font-size: 14px; letter-spacing: 0.08em; }
+  .load-more-wrap { position: relative; z-index: 1; text-align: center; padding: 2rem 3rem 4rem; }
+  .load-more-btn { display: inline-block; padding: 0.9rem 2.8rem; border: 0.5px solid var(--ink); color: var(--ink); background: transparent; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; }
+  .load-more-btn:hover { background: var(--accent); color: var(--bone); border-color: var(--accent); }
+  @media (max-width: 1024px) { .directory-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 768px) {
+    .page-header { padding: 7rem 1.5rem 2rem; flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+    .search-bar, .location-bar { padding: 1rem 1.5rem; }
+    .sub-filters { padding: 0.9rem 1.5rem; }
+    .directory { padding: 1.5rem; }
+    .directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .directory .profile-photo { height: 200px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Cool Tech People</a>
+  <nav>
+    <a href="directory.html" class="active">Directory</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<div class="page-header">
+  <h1>The Directory</h1>
+  <div class="result-count"><span id="count">0</span> Professionals</div>
+</div>
+
+<div class="search-bar">
+  <div class="search-bar-inner">
+    <div class="search-wrap">
+      <input type="text" id="search-input" placeholder="Search by name, gear, specialty...">
+      <button onclick="applyFilters()">Search</button>
+    </div>
+    <button class="clear-btn" onclick="clearAll()">Clear All</button>
+  </div>
+</div>
+
+<div class="category-tabs">
+  <div class="category-tabs-inner">
+    <button class="cat-tab active" data-category="all">All</button>
+    <button class="cat-tab" data-category="media-servers">Media Servers</button>
+    <button class="cat-tab" data-category="led">LED</button>
+    <button class="cat-tab" data-category="projection">Projection</button>
+    <button class="cat-tab" data-category="broadcast-switching">Broadcast & Switching</button>
+    <button class="cat-tab" data-category="creative-graphics">Creative & Graphics</button>
+    <button class="cat-tab" data-category="trainer">Certified Trainers</button>
+  </div>
+</div>
+
+<div class="sub-filters">
+  <div class="sub-filters-inner" id="sub-filters-inner"></div>
+</div>
+
+<div class="location-bar">
+  <div class="location-bar-inner">
+    <span class="sub-label">Region:</span>
+    <button class="filter-pill" data-filter="location" data-value="northeast">Northeast US</button>
+    <button class="filter-pill" data-filter="location" data-value="southeast">Southeast US</button>
+    <button class="filter-pill" data-filter="location" data-value="midwest">Midwest US</button>
+    <button class="filter-pill" data-filter="location" data-value="southwest">Southwest US</button>
+    <button class="filter-pill" data-filter="location" data-value="west-coast">West Coast US</button>
+    <button class="filter-pill" data-filter="location" data-value="europe">Europe</button>
+    <button class="filter-pill" data-filter="location" data-value="latin-america">Latin America</button>
+    <button class="filter-pill" data-filter="location" data-value="asia-pacific">Asia Pacific</button>
+    <button class="filter-pill" data-filter="location" data-value="middle-east">Middle East & Africa</button>
+    <button class="filter-pill" data-filter="location" data-value="touring">Touring / International</button>
+  </div>
+</div>
+
+<section class="directory">
+  <div class="directory-grid" id="directory-grid"></div>
+</section>
+
+<div class="load-more-wrap" id="load-more-wrap" style="display:none;">
+  <button class="load-more-btn" onclick="loadMore()">Load More</button>
+</div>
+
+<footer>
+  <span>Cool Tech People</span>
+  <span>&copy; 2026 — A Curated Community</span>
+</footer>
+
+<script src="profiles-data.js"></script>
+<script>
+  const PAGE_SIZE = 12;
+
+  const categories = {
+    'all': { label: 'Filter by Specialty', filters: [] },
+    'media-servers': { label: 'Media Server Software', filters: ['disguise','resolume','watchout','pixera','millumin','lightact','pixelhue','pandora-s-box'] },
+    'led': { label: 'LED Gear', filters: ['led-processing','brompton-tessera','megapixel-helios','novastar'] },
+    'projection': { label: 'Projection Tools', filters: ['large-volume-projection','projection-mapping','disguise-omnical'] },
+    'broadcast-switching': { label: 'Broadcast & Switching Gear', filters: ['atem','barco-e2','barco-e3','aquilon','ross-carbonite'] },
+    'creative-graphics': { label: 'Creative Tools', filters: ['notch','unreal','touch-designer'] },
+    'trainer': { label: 'Certification', filters: ['disguise-certified-trainer'] }
+  };
+
+  const filterLabels = {
+    'disguise': 'Disguise', 'resolume': 'Resolume', 'watchout': 'Watchout',
+    'pixera': 'Pixera', 'notch': 'Notch', 'aquilon': 'Aquilon',
+    'millumin': 'Millumin', 'led-processing': 'LED Processing',
+    'brompton-tessera': 'Brompton Tessera', 'megapixel-helios': 'Megapixel Helios',
+    'novastar': 'Novastar', 'pixelhue': 'PixelHue',
+    'atem': 'ATEM', 'barco-e2': 'Barco E2', 'barco-e3': 'Barco E3',
+    'unreal': 'Unreal', 'ross-carbonite': 'Ross Carbonite',
+    'disguise-certified-trainer': 'Disguise Certified Trainer',
+    'touch-designer': 'Touch Designer', 'pandora-s-box': "Pandora's Box",
+    'lightact': 'LightAct', 'disguise-omnical': 'Disguise | Omnical',
+    'projection-mapping': 'Projection Mapping', 'large-volume-projection': 'Large Volume Projection'
+  };
+
+  let activeCategory = 'all';
+  let activeSubFilter = null;
+  let activeLocation = null;
+  let currentPool = [];
+  let visibleCount = 0;
+  let isFiltering = false;
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function cardHTML(p) {
+    return `
+      <a class="profile-card" href="${p.profile}">
+        <div class="profile-photo">
+          <img src="${p.photo}" alt="${p.name}" style="object-position:${p.position};" loading="lazy" />
+        </div>
+        <div class="profile-name">${p.name}</div>
+        <div class="profile-role">${p.title}</div>
+        <div class="profile-location">${p.city} <span style="opacity:0.5;">·</span> ${p.regionLabel}</div>
+        <div class="profile-tags">${p.tags.map(t => `<span class="profile-tag">${t}</span>`).join('')}</div>
+      </a>`;
+  }
+
+  function renderSubFilters(category) {
+    const inner = document.getElementById('sub-filters-inner');
+    const cat = categories[category];
+    if (!cat || cat.filters.length === 0) {
+      inner.innerHTML = '<span class="sub-label" style="color:var(--ink-muted);font-style:italic;">Select a category above to filter by specialty</span>';
+      return;
+    }
+    inner.innerHTML = `<span class="sub-label">${cat.label}:</span>` +
+      cat.filters.map(f => `<button class="filter-pill${activeSubFilter === f ? ' active' : ''}" data-filter="sub" data-value="${f}">${filterLabels[f] || f}</button>`).join('');
+
+    inner.querySelectorAll('.filter-pill[data-filter="sub"]').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const val = pill.dataset.value;
+        if (activeSubFilter === val) {
+          activeSubFilter = null;
+          pill.classList.remove('active');
+        } else {
+          inner.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          activeSubFilter = val;
+        }
+        applyFilters();
+      });
+    });
+  }
+
+  function renderGrid(list, limit) {
+    const grid = document.getElementById('directory-grid');
+    const shown = limit ? list.slice(0, limit) : list;
+    grid.innerHTML = shown.length
+      ? shown.map(cardHTML).join('')
+      : '<div class="no-results">No professionals match your filters.</div>';
+    document.getElementById('count').textContent = list.length;
+    document.getElementById('load-more-wrap').style.display =
+      (!isFiltering && list.length > visibleCount) ? 'block' : 'none';
+  }
+
+  function applyFilters() {
+    const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+    isFiltering = !!(searchTerm || activeSubFilter || activeLocation || activeCategory !== 'all');
+
+    const filtered = PROFILES.filter(p => {
+      const matchSearch = !searchTerm ||
+        p.name.toLowerCase().includes(searchTerm) ||
+        p.role.includes(searchTerm) ||
+        p.expertise.includes(searchTerm) ||
+        p.location.includes(searchTerm) ||
+        p.title.toLowerCase().includes(searchTerm);
+      const matchCat = activeCategory === 'all' || p.category.includes(activeCategory);
+      const matchSub = !activeSubFilter || p.expertise.includes(activeSubFilter) || p.role.includes(activeSubFilter);
+      const matchLoc = !activeLocation || p.location.includes(activeLocation);
+      return matchSearch && matchCat && matchSub && matchLoc;
+    });
+
+    if (isFiltering) {
+      renderGrid(filtered, null);
+    } else {
+      renderGrid(shuffle(PROFILES), PAGE_SIZE);
+    }
+  }
+
+  function loadMore() {
+    visibleCount = Math.min(visibleCount + PAGE_SIZE, currentPool.length);
+    renderGrid(currentPool, visibleCount);
+  }
+
+  function clearAll() {
+    document.getElementById('search-input').value = '';
+    activeCategory = 'all';
+    activeSubFilter = null;
+    activeLocation = null;
+    isFiltering = false;
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    document.querySelector('.cat-tab[data-category="all"]').classList.add('active');
+    document.querySelectorAll('.filter-pill[data-filter="location"]').forEach(p => p.classList.remove('active'));
+    renderSubFilters('all');
+    currentPool = shuffle(PROFILES);
+    visibleCount = Math.min(PAGE_SIZE, currentPool.length);
+    renderGrid(currentPool, visibleCount);
+  }
+
+  document.querySelectorAll('.cat-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeCategory = tab.dataset.category;
+      activeSubFilter = null;
+      renderSubFilters(activeCategory);
+      applyFilters();
+    });
+  });
+
+  document.querySelectorAll('.filter-pill[data-filter="location"]').forEach(pill => {
+    pill.addEventListener('click', () => {
+      const val = pill.dataset.value;
+      if (activeLocation === val) {
+        activeLocation = null;
+        pill.classList.remove('active');
+      } else {
+        document.querySelectorAll('.filter-pill[data-filter="location"]').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        activeLocation = val;
+      }
+      applyFilters();
+    });
+  });
+
+  document.getElementById('search-input').addEventListener('input', applyFilters);
+
+  currentPool = shuffle(PROFILES);
+  visibleCount = Math.min(PAGE_SIZE, currentPool.length);
+  renderSubFilters('all');
+  renderGrid(currentPool, visibleCount);
+</script>
+
+</body>
+</html>

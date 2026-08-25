@@ -1,0 +1,31 @@
+{
+  "slug": "melinda-sihalath",
+  "name": "Melinda Sihalath",
+  "title": "Media Server Operator",
+  "photo": "images/melinda-sihalath-headshot.jpg",
+  "photoPosition": "center top",
+  "city": "Nashville, TN",
+  "region": "southeast",
+  "regionLabel": "Southeast US",
+  "categories": ["media-servers"],
+  "roleTags": ["media-server"],
+  "expertise": {
+    "Media Servers": ["Disguise", "Millumin"],
+    "Production": ["Corporate", "Installations"]
+  },
+  "cardTags": ["Disguise", "Millumin"],
+  "bio": "Melinda is a sharp and dependable live events specialist with deep expertise in Disguise and Millumin. Known for her methodical approach and ability to stay composed under pressure, she has successfully delivered technical excellence across some of the most immersive and high-profile productions in the industry — including multiple Illuminarium venues across North America and beyond.",
+  "projects": [
+    { "title": "Illuminarium Venues", "desc": "Technical specialist across multiple Illuminarium immersive experience venues — Las Vegas, Atlanta, Toronto, and Macau — delivering consistent, high-quality visual experiences across each unique installation." },
+    { "title": "Corporate Live Events", "desc": "Extensive corporate production experience across a wide range of high-profile clients and events. The work speaks for itself." }
+  ],
+  "contact": {
+    "email": "melinda@sihalath.co",
+    "instagram": "https://www.instagram.com/SihalathCo",
+    "linkedin": "https://www.linkedin.com/in/melindasihalath/",
+    "website": null
+  },
+  "availableFor": "Touring · Corporate · Installations · Live Events",
+  "status": null,
+  "locationOverride": "Tennessee"
+}

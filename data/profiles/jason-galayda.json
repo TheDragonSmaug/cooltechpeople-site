@@ -1,0 +1,34 @@
+{
+  "slug": "jason-galayda",
+  "name": "Jason Galayda",
+  "title": "LED Technician · Media Server Op",
+  "photo": "images/jason-galayda-headshot.jpg",
+  "photoPosition": "center top",
+  "city": "Medellín, Colombia",
+  "region": "latin-america",
+  "regionLabel": "Latin America",
+  "categories": ["led", "media-servers"],
+  "roleTags": ["led-technician", "media-server"],
+  "expertise": {
+    "Media Servers": ["Disguise", "Resolume", "Millumin"],
+    "LED": ["LED Processing", "Brompton Tessera", "Megapixel Helios", "Novastar"],
+    "Projection": ["Projection Mapping"],
+    "Production": ["Touring", "Corporate"]
+  },
+  "cardTags": ["LED Processing", "Brompton", "Disguise"],
+  "bio": "Jason started his career as an LED video engineer assist in Chicago, spending over 10 years engineering LED walls from small breakout rooms to leading crews on massive general sessions. He has mastered playback and projection mapping with Disguise (D3) plus multiple other systems. Based in Medellín, Colombia, he primarily engineers D3 playback systems on AAA tours — taking his technical skills to clients everywhere.",
+  "projects": [
+    { "title": "RSNA Chicago — Multiple Years", "desc": "LED lead and media server specialist for the Radiological Society of North America's annual conference in Chicago. Years of experience leading LED union crews and programming media playback for various booths — including Barco, Phillips, and many more." },
+    { "title": "Doechii — \"Live From The Swamp\" Tour", "desc": "LED Engineer on Doechii's \"Live From The Swamp\" tour, managing all LED systems and ensuring flawless visual delivery across venues throughout the run." },
+    { "title": "Cardi B — \"Little Miss Drama\" Tour", "desc": "D3 server engineer on Cardi B's \"Little Miss Drama\" tour, working to facilitate smooth workflow for playback tech Brittany and keeping the technical operation running seamlessly night after night." },
+    { "title": "Dreamforce & CES Trade Shows", "desc": "Technical LED support for Salesforce's flagship Dreamforce conference and multiple CES trade show booth installations, overseeing LED system setup, programming, and operation for high-profile brand activations." }
+  ],
+  "contact": {
+    "email": "jason.galayda@gmail.com",
+    "instagram": null,
+    "linkedin": "https://www.linkedin.com/in/jgalayda/",
+    "website": null
+  },
+  "availableFor": "Touring · Corporate · Live Events",
+  "status": null
+}

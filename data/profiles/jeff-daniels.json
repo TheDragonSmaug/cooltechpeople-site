@@ -1,0 +1,35 @@
+{
+  "slug": "jeff-daniels",
+  "name": "Jeff Daniels",
+  "title": "Live Events Professional",
+  "photo": "images/jeff-daniels-headshot.jpg",
+  "photoPosition": "center 15%",
+  "city": "Salt Lake City, UT",
+  "region": "southwest",
+  "regionLabel": "Southwest US",
+  "categories": ["media-servers", "broadcast-switching"],
+  "roleTags": ["technical-director", "media-server", "broadcast"],
+  "expertise": {
+    "Media Servers": ["Disguise", "Resolume"],
+    "LED": ["LED Processing"],
+    "Broadcast & Switching": ["Barco E2"],
+    "Production": ["Touring", "Corporate", "Broadcast"]
+  },
+  "cardTags": ["Disguise", "Broadcast"],
+  "bio": "Jeff is a highly experienced live events professional with deep expertise in technical direction, media servers, and video systems. Known for his calm demeanor and sharp problem-solving instincts, he brings the same reliability to the world's biggest stages that he brings to everything he does — whether that's a 50,000-person show or a mountain pass on two wheels.",
+  "projects": [
+    { "title": "Large-Scale Live Productions", "desc": "Technical direction and media server operation for large-scale live events, managing complex video workflows and redundant systems from pre-production through show day." },
+    { "title": "Corporate & Conference Events", "desc": "Technical leadership for high-profile corporate productions requiring broadcast-quality output, multi-screen video setups, and precise real-time content management." },
+    { "title": "Touring & Festival Productions", "desc": "Technical director and video systems operator on major touring and festival productions, delivering consistent excellence across venues of all sizes nightly." },
+    { "title": "Broadcast & Live Streaming", "desc": "Technical lead for broadcast-quality live productions with redundant video infrastructure and real-time switching for global audiences." }
+  ],
+  "contact": {
+    "email": null,
+    "instagram": null,
+    "linkedin": "#",
+    "website": "jeffdaniels.com"
+  },
+  "availableFor": "Touring · Corporate · Broadcast · Festivals",
+  "status": null,
+  "locationOverride": "Touring / International"
+}

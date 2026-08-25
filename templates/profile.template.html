@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{NAME}} — Cool Tech People</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">Cool Tech People</a>
+  <nav>
+    <a href="directory.html">Directory</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<a href="directory.html" class="back-link">← Back to Directory</a>
+
+<div class="name-block">
+  <div class="profile-name-large">{{NAME}}</div>
+  <div class="profile-title-large">{{TITLE}}</div>
+</div>
+
+<div class="profile-page">
+
+  <!-- COL 1: PHOTO -->
+  <div class="col-photo">
+    <img src="{{PHOTO}}" alt="{{NAME}}" style="object-position: {{PHOTO_POSITION}};" />
+  </div>
+
+  <!-- COL 2: EXPERTISE & BIO -->
+  <div class="col-expertise">
+    <div class="col-label">Expertise</div>
+    <div class="expertise-categories">
+{{EXPERTISE_BLOCKS}}
+    </div>
+    <div class="bio-text">{{BIO}}</div>
+  </div>
+
+  <!-- COL 3: PROJECTS -->
+  <div class="col-projects">
+    <div class="col-label">Notable Projects</div>
+{{PROJECT_BLOCKS}}
+  </div>
+
+  <!-- COL 4: CONTACT -->
+  <div class="col-contact">
+    <div class="col-label">Contact</div>
+{{CONTACT_BLOCKS}}
+    <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href); this.textContent='Link Copied!'">Share Profile</button>
+  </div>
+
+</div>
+
+<footer>
+  <span>Cool Tech People</span>
+  <span>&copy; 2026 — A Curated Community</span>
+</footer>
+
+</body>
+</html>

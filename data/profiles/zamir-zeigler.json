@@ -1,0 +1,33 @@
+{
+  "slug": "zamir-zeigler",
+  "name": "Zamir Zeigler",
+  "title": "Media Server Op · Video Engineer · Projectionist",
+  "photo": "images/zamir-zeigler-headshot.jpg",
+  "photoPosition": "75% 15%",
+  "city": "Miami, FL",
+  "region": "southeast",
+  "regionLabel": "Southeast US",
+  "categories": ["media-servers", "projection", "broadcast-switching"],
+  "roleTags": ["media-server", "video-engineer", "projectionist"],
+  "expertise": {
+    "Media Servers": ["Disguise", "Aquilon", "Pixera", "Millumin"],
+    "Projection": ["Projection Mapping", "Large Volume Projection"],
+    "Broadcast & Switching": ["Barco E2"],
+    "Production": ["Touring", "Corporate"]
+  },
+  "cardTags": ["Disguise", "Aquilon", "Pixera"],
+  "bio": "Known in the industry as \"Z\", Zamir is a seasoned live events and media technology specialist with deep expertise across media servers, projection, and large-scale technical production. With hands-on experience spanning corporate events and major touring productions, he brings composure under pressure and sharp technical instincts to every show he works.",
+  "projects": [
+    { "title": "Tony Robbins Live Events", "desc": "Served as the dedicated Disguise operator for Tony Robbins live events, managing all media server playback and real-time content for high-energy, large-scale productions." },
+    { "title": "Corporate Live Events", "desc": "Served in virtually every video role across corporate-level productions — from media server operation and video engineering to projection and playback — delivering polished, reliable results for high-profile clients." },
+    { "title": "Kanye West — Donda Listening Parties", "desc": "Served as Disguise media server operator supporting Kanye West's Donda Listening Parties Tour, managing all media server playback for one of the most talked-about live event series of its time." }
+  ],
+  "contact": {
+    "email": "123zaz@gmail.com",
+    "instagram": null,
+    "linkedin": "https://www.linkedin.com/in/zamir-zeigler-29a5b3a0/",
+    "website": null
+  },
+  "availableFor": "Corporate · Live Events · Touring",
+  "status": null
+}

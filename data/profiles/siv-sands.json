@@ -1,0 +1,34 @@
+{
+  "slug": "siv-sands",
+  "name": "Siv Sands",
+  "title": "Media Server Specialist",
+  "photo": "images/siv-sands-headshot.jpg",
+  "photoPosition": "center top",
+  "city": "London, UK",
+  "region": "europe",
+  "regionLabel": "Europe",
+  "categories": ["media-servers", "projection"],
+  "roleTags": ["media-server", "projectionist"],
+  "expertise": {
+    "Media Servers": ["Disguise", "Pixera"],
+    "Creative & Graphics": ["Notch"],
+    "Projection": ["Projection Mapping"],
+    "Production": ["Touring", "Installations", "Corporate"]
+  },
+  "cardTags": ["Disguise", "Notch"],
+  "bio": "Siv is a creative and technically skilled media server specialist and projection designer based in London. With deep expertise in Disguise, Notch, and Vectorworks, she brings both artistic vision and precise technical execution to live events, installations, and touring productions across Europe and beyond.",
+  "projects": [
+    { "title": "Live Event Productions", "desc": "Media server specialist on large-scale live productions across Europe and internationally, programming and operating Disguise systems with precision from pre-production through show day." },
+    { "title": "Projection Design", "desc": "Designed and operated multi-surface projection environments for live events and corporate productions, combining Vectorworks drafting with real-time Notch content integration." },
+    { "title": "Touring Productions", "desc": "Media server operator and projection designer on major international touring productions, adapting technical setups across venues of all sizes nightly." },
+    { "title": "Immersive Installations", "desc": "Designed and operated immersive media environments for branded installations and experiential events, using Notch and Disguise for real-time generative content." }
+  ],
+  "contact": {
+    "email": null,
+    "instagram": null,
+    "linkedin": "#",
+    "website": "sivsands.com"
+  },
+  "availableFor": "Touring · Corporate · Installations · Live Events",
+  "status": null
+}

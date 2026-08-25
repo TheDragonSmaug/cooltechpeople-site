@@ -1,0 +1,34 @@
+{
+  "slug": "luke-lay",
+  "name": "Luke Lay",
+  "title": "Broadcast Engineer",
+  "photo": "images/luke-lay-headshot.jpg",
+  "photoPosition": "20% 15%",
+  "city": "Daytona Beach, FL",
+  "region": "southeast",
+  "regionLabel": "Southeast US",
+  "categories": ["broadcast-switching", "media-servers"],
+  "roleTags": ["broadcast", "technical-director"],
+  "expertise": {
+    "Media Servers": ["Disguise"],
+    "Broadcast & Switching": ["Barco E2", "ATEM"],
+    "Production": ["Touring", "Corporate", "Broadcast"]
+  },
+  "cardTags": ["Disguise", "Analog Way"],
+  "bio": "Luke is a skilled broadcast engineer and live events professional who is as comfortable behind a console as he is managing complex video infrastructure. With deep expertise in Disguise, Analog Way, and Barco systems, he has delivered broadcast-quality results on some of the industry's most technically demanding productions — and judging by the photo, he brings that same focused energy everywhere he goes.",
+  "projects": [
+    { "title": "Broadcast Productions", "desc": "Broadcast engineering for large-scale live productions, managing Analog Way and Barco systems with precision and reliability from pre-production through show day." },
+    { "title": "Corporate Events", "desc": "Technical lead for high-profile corporate productions requiring broadcast-quality video output, multi-screen setups, and real-time content management." },
+    { "title": "Touring & Festival Shows", "desc": "Broadcast engineer on major touring and festival productions, adapting video and broadcast workflows across venues of all sizes nightly." },
+    { "title": "Live Streaming", "desc": "Technical director for live streaming productions, managing end-to-end video workflows and ensuring broadcast-quality delivery for global online audiences." }
+  ],
+  "contact": {
+    "email": null,
+    "instagram": null,
+    "linkedin": "#",
+    "website": "lukelay.com"
+  },
+  "availableFor": "Touring · Corporate · Broadcast · Live Events",
+  "status": null,
+  "locationOverride": "Nashville, TN"
+}

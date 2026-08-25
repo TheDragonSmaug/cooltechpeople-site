@@ -1,0 +1,33 @@
+{
+  "slug": "scott-lau",
+  "name": "Scott Lau",
+  "title": "Technical Project Manager · Disguise",
+  "photo": "images/scott-lau-headshot.jpg",
+  "photoPosition": "center top",
+  "city": "Atlanta, GA",
+  "region": "southeast",
+  "regionLabel": "Southeast US",
+  "categories": ["media-servers", "broadcast-switching", "trainer"],
+  "roleTags": ["technical-director", "media-server"],
+  "expertise": {
+    "Media Servers": ["Disguise", "Millumin", "Aquilon"],
+    "Broadcast & Switching": ["Barco E2", "ATEM", "Ross Carbonite"],
+    "Production": ["Technical Direction", "Corporate", "Installations"],
+    "Certified Trainers": ["Disguise Certified Trainer"]
+  },
+  "cardTags": ["Disguise", "Certified Trainer"],
+  "bio": "Scott has spent 15 years immersed in the live events industry, serving in virtually every video-related role the industry has to offer — from camera directing and switching to media server operation and technical direction. He currently serves as Technical Project Manager at Disguise. Scott believes in always pushing beyond your limits and that being genuinely good to the people around you is just as important as the work itself.",
+  "projects": [
+    { "title": "Illuminarium — Immersive Media Server Lead", "desc": "Served as Immersive Media Server Lead for Illuminarium, one of the world's most ambitious immersive experience brands — programming the shows and overseeing the media server infrastructure across their landmark venues globally." },
+    { "title": "Tony Robbins — Virtual & Hybrid Transition", "desc": "Led the technical transition of Tony Robbins' live productions into virtual and hybrid formats at the height of COVID, migrating the entire system to a Disguise-based platform and enabling the show to reach global audiences seamlessly." },
+    { "title": "Disguise — Technical Project Management", "desc": "Currently managing high-profile Disguise client projects with budgets in excess of $15 million, overseeing technical delivery from pre-production through completion across some of the most complex productions in the industry." }
+  ],
+  "contact": {
+    "email": "scott.lau@disguise.one",
+    "instagram": null,
+    "linkedin": "https://www.linkedin.com/in/scott-lau-3739798/",
+    "website": null
+  },
+  "availableFor": null,
+  "status": "Currently serving as Technical Project Manager at Disguise"
+}
