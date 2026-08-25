@@ -5,8 +5,7 @@
   "photo": "images/melinda-sihalath-headshot.jpg",
   "photoPosition": "center top",
   "city": "Nashville, TN",
-  "region": "southeast",
-  "regionLabel": "Southeast US",
+  "country": "USA",
   "categories": ["media-servers"],
   "roleTags": ["media-server"],
   "expertise": {
