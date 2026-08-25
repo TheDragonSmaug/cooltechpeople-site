@@ -5,8 +5,7 @@
   "photo": "images/justin-king-headshot.jpg",
   "photoPosition": "center 30%",
   "city": "Orlando, FL",
-  "region": "southeast",
-  "regionLabel": "Southeast US",
+  "country": "USA",`
   "categories": ["broadcast-switching", "media-servers"],
   "roleTags": ["broadcast", "technical-director"],
   "expertise": {
