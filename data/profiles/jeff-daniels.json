@@ -5,8 +5,7 @@
   "photo": "images/jeff-daniels-headshot.jpg",
   "photoPosition": "center 15%",
   "city": "Salt Lake City, UT",
-  "region": "southwest",
-  "regionLabel": "Southwest US",
+  "country": "USA",`
   "categories": ["media-servers", "broadcast-switching"],
   "roleTags": ["technical-director", "media-server", "broadcast"],
   "expertise": {
