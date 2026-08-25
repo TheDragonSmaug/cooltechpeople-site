@@ -4,9 +4,8 @@
   "title": "Media Server Specialist",
   "photo": "images/siv-sands-headshot.jpg",
   "photoPosition": "center top",
-  "city": "London, UK",
-  "region": "europe",
-  "regionLabel": "Europe",
+  "city": "Atlanta, GA",
+  "country": "USA",`
   "categories": ["media-servers", "projection"],
   "roleTags": ["media-server", "projectionist"],
   "expertise": {
