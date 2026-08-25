@@ -5,8 +5,7 @@
   "photo": "images/zamir-zeigler-headshot.jpg",
   "photoPosition": "75% 15%",
   "city": "Miami, FL",
-  "region": "southeast",
-  "regionLabel": "Southeast US",
+  "country": "USA",
   "categories": ["media-servers", "projection", "broadcast-switching"],
   "roleTags": ["media-server", "video-engineer", "projectionist"],
   "expertise": {

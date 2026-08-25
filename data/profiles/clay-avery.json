@@ -5,8 +5,7 @@
   "photo": "images/clay-avery-headshot.jpg",
   "photoPosition": "35% 15%",
   "city": "Houston, TX",
-  "region": "southwest",
-  "regionLabel": "Southwest US",
+  "country": "USA",
   "categories": ["media-servers", "trainer"],
   "roleTags": ["media-server", "trainer"],
   "expertise": {
