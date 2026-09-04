@@ -95,7 +95,14 @@ function renderContactBlocks(profile) {
       <div class="contact-label">Email</div>
       <div class="contact-value">${c.email ? `<a href="mailto:${c.email}">${c.email}</a>` : '—'}</div>
     </div>`);
-
+  
+  if (c.phone) {
+  blocks.push(`    <div class="contact-item">
+      <div class="contact-label">Phone</div>
+      <div class="contact-value"><a href="tel:${c.phone.replace(/[^0-9+]/g, '')}">${c.phone}</a></div>
+    </div>`);
+  }
+  
   if (c.website) {
     blocks.push(`    <div class="contact-item">
       <div class="contact-label">Website</div>
