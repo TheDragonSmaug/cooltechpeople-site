@@ -1,0 +1,32 @@
+{
+  "slug": "rafael-motta",
+  "name": "Rafael Motta",
+  "title": "Video Production Engineer: Barco E2/E3, AW PremierCore (RS4, RS6), PixelHue, Disguise",
+  "photo": "images/rafael_motta_headshot.jpg",
+  "photoPosition": "center top",
+  "city": "Boca Raton, FL",
+  "region": "southeast",
+  "regionLabel": "Southeast US",
+  "categories": ["media-servers", "broadcast-switching", "projection", "led"],
+  "roleTags": ["media-server", "video-engineer", "projectionist", "technical-director"],
+  "expertise": {
+    "Media Servers": ["Disguise", "Resolume", "Millumin"],
+    "LED": ["Custom EDID", "HighRes Engineering"],
+    "Projection": ["Projection Mapping", "Large Blends"],
+    "Broadcast & Switching": ["ATEM", "Barco E2", "Barco E3", "Aquilon RS4", "Aquilon RS6", "PixelHue Q8", "HighRes Switching"],
+    "Certifications": ["Disguise", "Barco", "PixelHue"],
+    "Production": ["Corporate", "Live Events", "General Sessions", "Breakout Rooms", "Immersive / Experiential", "Consultations"]
+  },
+  "cardTags": ["Barco E2", "Aquilon RS6", "PixelHue Q8", "Disguise"],
+  "bio": "I am passionate about audiovisual production and have decades of experience in the field. I believe in achieving success through careful design, not luck. From small-scale projects to large collaborations with industry professionals, I have gained valuable experience that has shaped my approach to storytelling through audiovisual mediums. I am always seeking new opportunities to work with talented and cool individuals, amazing production companies and bring their ideas to life. I am extremely skilled in various tools such as Barco E2, AW PremierCore (RS4 and RS6), PixelHue Q8, Disguise, Resolume, Millumin, EIC and a variety of other video production skills. These are just a few examples of my skill set as a full-service video production engineer. I am passionate about collaborating with the creative team from the start and using my engineering expertise to create an exceptional audience experience on-site. I have extensive experience in virtual events, including virtual studio setups and full xR experiences.",
+  "projects": [],
+  "contact": {
+    "email": "rmotta81@gmail.com",
+    "phone": "954-483-0845",
+    "instagram": "https://www.instagram.com/rafxr99/",
+    "linkedin": "#",
+    "website": "https://rafaelmotta.one"
+  },
+  "availableFor": "Corporate · Live Events · General Sessions · Breakout Rooms · Technical Direction · Consultations",
+  "status": "Open for bookings — based in South Florida, available to travel Domestic and Intl."
+}
